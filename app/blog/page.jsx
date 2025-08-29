@@ -1,7 +1,7 @@
+import api from "@/utils/api"
+
 export default async function Blog() {
-  // fetch lato server
-  const res = await fetch("https://jsonplaceholder.typicode.com/users", { cache: "no-store" })
-  const users = await res.json()
+  const users = await api.fetchUsers()
 
   return (
     <div className='container-full h-[50vh] perfect-center bg-primary-soft'>
