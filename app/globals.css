@@ -1,45 +1,282 @@
+/** biome-ignore-all lint/suspicious/noUnknownAtRules: tailwind customization */
 @import 'tailwindcss';
 
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ANCHOR THEME VARIABLES ----------------------------------------------------------------- */
+@theme {
+  /* - Base -------------------------------- */
+
+  --color-base-100: oklch(98% 0.003 247.858);
+  --color-base-200: oklch(96% 0.007 247.896);
+  --color-base-300: oklch(92% 0.013 255.508);
+  --color-base-content: oklch(37% 0.044 257.287);
+  --color-base-soft-content: oklch(55% 0.046 257.417);
+
+  /* - Primary -------------------------- */
+
+  --color-primary: oklch(54% 0.245 262.881);
+  --color-primary-content: oklch(100% 0 0);
+  --color-primary-soft: oklch(88% 0.059 254.128);
+  --color-primary-soft-content: oklch(48% 0.243 264.376);
+
+  /* - Secondary ------------------------ */
+
+  --color-secondary: oklch(51% 0.262 276.966);
+  --color-secondary-content: oklch(93% 0.034 272.788);
+  --color-secondary-soft: oklch(87% 0.065 274.039);
+  --color-secondary-soft-content: oklch(45% 0.24 277.023);
+
+  /* - Accent ------------------------- */
+
+  --color-accent: oklch(58% 0.158 241.966);
+  --color-accent-content: oklch(100% 0 0);
+  --color-accent-soft: oklch(90% 0.058 230.902);
+  --color-accent-soft-content: oklch(44% 0.11 240.79);
+
+  /* - Neutral ---------------------- */
+
+  --color-neutral: oklch(37% 0.044 257.287);
+  --color-neutral-content: oklch(100% 0 0);
+  --color-neutral-soft: oklch(86% 0.022 252.894);
+  --color-neutral-soft-content: oklch(44% 0.043 257.281);
+
+  /* - Info ------------------------ */
+
+  --color-info: oklch(52% 0.105 223.128);
+  --color-info-content: oklch(98% 0.019 200.873);
+  --color-info-soft: oklch(91% 0.08 205.041);
+  --color-info-soft-content: oklch(45% 0.085 224.283);
+
+  /* - Success ------------------- */
+
+  --color-success: oklch(52% 0.154 150.069);
+  --color-success-content: oklch(96% 0.044 156.743);
+  --color-success-soft: oklch(92% 0.084 155.995);
+  --color-success-soft-content: oklch(44% 0.119 151.328);
+
+  /* - Warning ---------------- */
+
+  --color-warning: oklch(55% 0.135 66.442);
+  --color-warning-content: oklch(97% 0.071 103.193);
+  --color-warning-soft: oklch(94% 0.129 101.54);
+  --color-warning-soft-content: oklch(47% 0.114 61.907);
+
+  /* - Error --------------- */
+
+  --color-error: oklch(51% 0.222 16.935);
+  --color-error-content: oklch(94% 0.03 12.58);
+  --color-error-soft: oklch(89% 0.058 10.001);
+  --color-error-soft-content: oklch(51% 0.222 16.935);
+
+  /* NOTE BREAKPOINTS ---------------------------------- */
+  --breakpoint-sm: 30rem; /* 480px */
+  --breakpoint-md: 48rem; /* 768px */
+  --breakpoint-lg: 64rem; /* 1024px */
+  --breakpoint-xl: 90rem; /* 1440px */
+
+  /* NOTE FONT SIZE ---------------------------------- */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.75rem;
+  --text-4xl: 2rem;
+  --text-5xl: 2.25rem;
+  --text-6xl: 2.5rem;
+  --text-7xl: 3rem;
+  --text-8xl: 3.5rem;
+  --text-9xl: 4rem;
+  --text-10xl: 4.5rem;
+  --text-11xl: 5rem;
+  --text-12xl: 5.75rem;
+  --text-13xl: 7.125rem;
+  --text-14xl: 7.875rem;
+  --text-15xl: 8.875rem;
+
+  /* NOTE LINE HEIGHT ---------------------------------- */
+  --leading-tight: 0.95;
+  --leading-default: 1;
+  --leading-normal: 1.25;
+  --leading-loose: 1.4;
+
+  /* NOTE LETTER SPACING ---------------------------------- */
+  --tracking-tighter: -0.008em;
+  --tracking-normal: 0em;
+  --tracking-widest: 0.008em;
+
+  /* NOTE BORDER RADIUS ---------------------------------- */
+  --radius-none: 0rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 2rem;
+  --radius-2xl: 4rem;
+  --radius-full: 900px;
+
+  /* NOTE SHADOWS ----------------------------------------- */
+  --shadow-sm: 0 4px 12px 0 rgb(0 0 0 / 0.04);
+  --shadow-md: 0 8px 24px 0px rgb(0 0 0 / 0.04);
+  --shadow-lg: 0 16px 36px -4px rgb(0 0 0 / 0.04);
+  --shadow-xl: 0 24px 48px -4px rgb(0 0 0 / 0.04);
+  --shadow-2xl: 0 32px 56px -4px rgb(0 0 0 / 0.08);
+
+  /* NOTE SPACING ----------------------------------------- */
+  --spacing-0: 0rem;
+  --spacing-px: 1px; 
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-2: 0.5rem; /* 8px */
+  --spacing-3: 0.75rem; 
+  --spacing-4: 1rem; /* 16px */
+  --spacing-5: 1.25rem; /* 20px */
+  --spacing-6: 1.5rem;
+  --spacing-7: 1.75rem; 
+  --spacing-8: 2rem; /* 32px */
+  --spacing-9: 2.25rem; 
+  --spacing-10: 2.5rem; /* 40px */
+  --spacing-12: 3rem; /* 48px */
+  --spacing-14: 3.5rem; /* 56px */
+  --spacing-16: 4rem;
+  --spacing-20: 5rem; /* 80px */
+  --spacing-24: 6rem; /* 96px */
+  --spacing-28: 7rem;
+  --spacing-36: 9rem; /* 144px */
+  --spacing-44: 11rem; 
+  --spacing-52: 13rem; /* 208px */
+  --spacing-60: 15rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ANCHOR DEFAULT STYLES ----------------------------------------------------------------- */
+@layer base {
+  body {
+    /* background-color: var(--color-base-100); */
+    @apply text-base-soft-content bg-base-100;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+/* ANCHOR REUSABLE CLASSES ----------------------------------------------------------------- */
+@layer components {
+
+  /* classi componenti (es. .btn .btn-primary) */
+  
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ANCHOR UTILITIES ----------------------------------------------------------------- */
+@utility transition-base {
+  @apply transition-all duration-300 ease-in-out;
+}
+@utility focus-state {
+  @apply focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-black focus-visible:outline-0;
+}
+/* NOTE FONT -> Display ----------------------------------------- */
+@utility font-display-1 {
+  @apply lg:text-10xl text-8xl leading-none font-normal md:text-9xl;
+}
+@utility font-display-2 {
+  @apply text-7xl leading-none font-normal md:text-8xl lg:text-9xl;
+}
+@utility font-display-3 {
+  @apply text-6xl leading-none font-normal md:text-7xl lg:text-8xl;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* NOTE FONT -> Headings ----------------------------------------- */
+@utility font-h1 {
+  @apply text-5xl leading-normal font-bold md:text-6xl lg:text-7xl;
+}
+@utility font-h2 {
+  @apply text-4xl leading-normal font-bold md:text-5xl lg:text-6xl;
+}
+@utility font-h3 {
+  @apply text-2xl leading-normal font-semibold md:text-3xl lg:text-4xl;
+}
+@utility font-h4 {
+  @apply text-xl leading-normal font-semibold md:text-2xl lg:text-3xl;
+}
+@utility font-h5 {
+  @apply text-lg leading-normal font-semibold md:text-xl lg:text-2xl;
+}
+@utility font-h6 {
+  @apply text-lg leading-normal font-bold tracking-widest lg:text-xl;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* NOTE FONT -> Body ----------------------------------------- */
+/* l */
+@utility font-body-l-small {
+  @apply text-2xl leading-loose font-light tracking-normal;
+}
+@utility font-body-l-normal {
+  @apply text-2xl leading-loose font-medium tracking-normal;
+}
+@utility font-body-l-big {
+  @apply text-2xl leading-loose font-bold tracking-widest;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-} */
+/* m */
+@utility font-body-m-small {
+  @apply text-lg leading-loose font-light tracking-normal;
+}
+@utility font-body-m-normal {
+  @apply text-lg leading-loose font-normal tracking-normal;
+}
+@utility font-body-m-big {
+  @apply text-lg leading-loose font-bold -tracking-widest;
+}
+
+/* base */
+@utility font-body-base-normal {
+  @apply text-base leading-loose font-normal tracking-normal;
+}
+@utility font-body-base-big {
+  @apply text-base leading-loose font-semibold tracking-widest;
+}
+
+/* s */
+@utility font-body-s-normal {
+  @apply text-sm leading-loose font-normal tracking-normal;
+}
+@utility font-body-s-big {
+  @apply text-sm leading-loose font-semibold tracking-widest;
+}
+
+/* NOTE CONTAINERS ----------------------------------------- */
+@utility container-full {
+  @apply relative flex w-full flex-col items-stretch;
+}
+@utility container-responsive {
+  @apply relative mx-auto flex w-full flex-col items-stretch lg:max-w-[96%] xl:w-[92%] xl:max-w-[1440px];
+}
+@utility container-fixed {
+  @apply relative mx-auto flex w-[96%] flex-col items-stretch xl:w-[92%] xl:max-w-[1440px];
+}
+
+/* NOTE CONTAINERS -> Rows ----------------------------------------- */
+@utility row-flex {
+  @apply flex flex-col items-stretch;
+}
+@utility row-flex-responsive {
+  @apply flex flex-col items-stretch md:flex-row md:flex-wrap;
+}
+@utility row-grid {
+  @apply grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12;
+}
+
+/* NOTE PERFECT CENTER ----------------------------------------- */
+@utility perfect-center {
+  @apply flex items-center justify-center;
+}
+
+/* NOTE ABSOLUTE CENTER ----------------------------------------- */
+@utility absolute-center {
+  @apply top-1/2 left-1/2 translate-[-50%];
+}
+
+/* NOTE RESPONSIVE IMAGE ----------------------------------------- */
+@utility image-responsive {
+  @apply size-full object-cover;
+}
+
+/* NOTE DEFAULT PADDING SECTION ----------------------------------------- */
+@utility p-section {
+  @apply p-2 md:p-5 xl:p-8;
+}
