@@ -4,6 +4,9 @@ export default async function Blog() {
   const users = await api.fetchUsers()
   const { todos, comments } = await api.fetchToDosComments()
 
+  // simulazione ritardo caricamento fetch per vedere loading.jsx
+  await new Promise((resolve) => setTimeout(resolve, 3000))
+
   return (
     <div className='container-full min-h-[50vh] flex flex-col gap-4 bg-primary-soft'>
       <h1 className='font-h1 text-primary-soft-content'>Blog Home!</h1>
