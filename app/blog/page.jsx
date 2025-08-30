@@ -1,6 +1,10 @@
+/** biome-ignore-all lint/correctness/noUnreachable: testing error */
 import api from "@/utils/api"
 
 export default async function Blog() {
+  // simulazione errore per vedere error.jsx
+  // throw new Error("Qualcosa è andato storto!")
+
   const users = await api.fetchUsers()
   const { todos, comments } = await api.fetchToDosComments()
 
