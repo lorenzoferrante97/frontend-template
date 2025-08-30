@@ -3,6 +3,7 @@
 import { Suspense } from "react"
 import api from "@/utils/api"
 import Users from "./Users"
+import UsersSkeleton from "./UsersSkeleton"
 
 export default async function Blog() {
   // simulazione errore per vedere error.jsx
@@ -17,7 +18,7 @@ export default async function Blog() {
     <div className='container-full min-h-[50vh] flex flex-col gap-4 bg-primary-soft'>
       <h1 className='font-h1 text-primary-soft-content'>Blog Home!</h1>
       <h2 className='font-h2'>Users</h2>
-      <Suspense fallback={<span>Caricamento Users...</span>}>
+      <Suspense fallback={<UsersSkeleton />}>
         <Users />
       </Suspense>
       <h2 className='font-h2'>Todos</h2>
