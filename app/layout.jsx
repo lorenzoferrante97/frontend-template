@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
         <nav className='flex items-center gap-2 bg-base-300'>
           <Link href='/'>Home</Link>
           <Link href='/blog'>Blog</Link>
+          <Link href='/blog/posts/97'>Post 97</Link>
         </nav>
         {children}
         {/* - FOOTER ------------------ */}
