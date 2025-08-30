@@ -2,6 +2,8 @@
 
 import { Suspense } from "react"
 import api from "@/utils/api"
+import WrapperForClient from "../components/WrapperForClient"
+import Todos from "./Todos"
 import Users from "./Users"
 import UsersSkeleton from "./UsersSkeleton"
 
@@ -9,7 +11,7 @@ export default async function Blog() {
   // simulazione errore per vedere error.jsx
   // throw new Error("Qualcosa è andato storto!")
 
-  const { todos, comments } = await api.fetchToDosComments()
+  // const { todos, comments } = await api.fetchToDosComments()
 
   // simulazione ritardo caricamento fetch per vedere loading.jsx
   // await new Promise((resolve) => setTimeout(resolve, 3000))
@@ -22,21 +24,26 @@ export default async function Blog() {
         <Users />
       </Suspense>
       <h2 className='font-h2'>Todos</h2>
-      <ul className='list-disc pl-5'>
+      {/* todos client component */}
+
+      {/* <Todos /> */}
+      <WrapperForClient Component={Todos} />
+
+      {/* <ul className='list-disc pl-5'>
         {todos.map((todo) => (
           <li key={todo.id}>
             {todo.title} ({todo.id})
           </li>
         ))}
-      </ul>
-      <h2 className='font-h2'>Comments</h2>
+      </ul> */}
+      {/* <h2 className='font-h2'>Comments</h2>
       <ul className='list-disc pl-5'>
         {comments.map((comment) => (
           <li key={comment.id}>
             {comment.name} ({comment.email})
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   )
 }
