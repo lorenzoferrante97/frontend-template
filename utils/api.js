@@ -8,4 +8,18 @@ const fetchUsers = async () => {
 	return res.json();
 };
 
-export default { fetchUsers };
+const fetchToDosComments = async () => {
+	const promises = [
+		fetch("https://jsonplaceholder.typicode.com/todos").then((res) =>
+			res.json(),
+		),
+		fetch("https://jsonplaceholder.typicode.com/comments").then((res) =>
+			res.json(),
+		),
+	];
+	const [todos, comments] = await Promise.all(promises);
+
+	return { todos, comments };
+};
+
+export default { fetchUsers, fetchToDosComments };
