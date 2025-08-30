@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import api from "@/utils/api"
+import UsersSkeleton from "./UsersSkeleton"
 
 export default function Todos() {
   const [todos, setTodos] = useState([])
@@ -17,7 +18,7 @@ export default function Todos() {
   }, [])
 
   if (loading) {
-    return <p>Caricamento todos...</p>
+    return <UsersSkeleton />
   }
 
   return (
