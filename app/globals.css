@@ -91,49 +91,49 @@
 /*---break--- */
 @theme inline {
 
-  --radius-sm: calc(var(--radius) - 4px);
+  --radius-sm: var(--radius-sm);
 
-  --radius-md: calc(var(--radius) - 2px);
+  --radius-md: var(--radius-md);
 
-  --radius-lg: var(--radius);
+  --radius-lg: var(--radius-lg);
 
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-xl: var(--radius-xl);
 
-  --color-background: var(--background);
+  --color-background: var(--color-base-100);
 
-  --color-foreground: var(--foreground);
+  --color-foreground: var(--color-base-soft-content);
 
-  --color-card: var(--card);
+  --color-card: var(--color-base-100);
 
-  --color-card-foreground: var(--card-foreground);
+  --color-card-foreground: var(--color-base-soft-content);
 
-  --color-popover: var(--popover);
+  --color-popover: var(--color-base-300);
 
-  --color-popover-foreground: var(--popover-foreground);
+  --color-popover-foreground: var(--color-base-content);
 
-  --color-primary: var(--primary);
+  --color-primary: var(--color-custom-primary);
 
-  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-foreground: var(--color-custom-primary-content);
 
-  --color-secondary: var(--secondary);
+  --color-secondary: var(--color-custom-secondary);
 
-  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-foreground: var(--color-custom-secondary-content);
 
-  --color-muted: var(--muted);
+  --color-muted: var(--color-custom-neutral);
 
-  --color-muted-foreground: var(--muted-foreground);
+  --color-muted-foreground: var(--color-custom-neutral-content);
 
-  --color-accent: var(--accent);
+  --color-accent: var(--color-custom-accent);
 
-  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-foreground: var(--color-custom-accent-content);
 
-  --color-destructive: var(--destructive);
+  --color-destructive: var(--color-custom-error);
 
-  --color-border: var(--border);
+  --color-border: var(--color-base-300);
 
-  --color-input: var(--input);
+  --color-input: var(--color-base-100);
 
-  --color-ring: var(--ring);
+  --color-ring: var(--color-base-content);
 
   --color-chart-1: var(--chart-1);
 
@@ -145,21 +145,21 @@
 
   --color-chart-5: var(--chart-5);
 
-  --color-sidebar: var(--sidebar);
+  --color-sidebar: var(--color-base-200);
 
-  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-foreground: var(--color-base-soft-content);
 
-  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary: var(--color-custom-primary-soft);
 
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary-foreground: var(--color-custom-primary-soft-content);
 
-  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent: var(--color-custom-accent-soft);
 
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent-foreground: var(--color-custom-accent-soft-content);
 
-  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-border: var(--color-base-300);
 
-  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-ring: var(--color-base-content);
 
   /* my custom colors */
 
@@ -232,9 +232,16 @@
 
 :root {
 
-  --radius: 0.625rem;
+  /* --radius: 0.625rem; */
+  --radius-none: 0rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 2rem;
+  --radius-2xl: 4rem;
+  --radius-full: 900px;
 
-  --background: oklch(1 0 0);
+  /* --background: oklch(1 0 0);
 
   --foreground: oklch(0.129 0.042 264.695);
 
@@ -268,7 +275,7 @@
 
   --input: oklch(0.929 0.013 255.508);
 
-  --ring: oklch(0.704 0.04 256.788);
+  --ring: oklch(0.704 0.04 256.788); */
 
   --chart-1: oklch(0.646 0.222 41.116);
 
@@ -280,7 +287,7 @@
 
   --chart-5: oklch(0.769 0.188 70.08);
 
-  --sidebar: oklch(0.984 0.003 247.858);
+  /* --sidebar: oklch(0.984 0.003 247.858);
 
   --sidebar-foreground: oklch(0.129 0.042 264.695);
 
@@ -294,7 +301,7 @@
 
   --sidebar-border: oklch(0.929 0.013 255.508);
 
-  --sidebar-ring: oklch(0.704 0.04 256.788);
+  --sidebar-ring: oklch(0.704 0.04 256.788); */
 
   /* my custom colors */
 

@@ -1,12 +1,20 @@
 // import Image from "next/image";
 // import Script from "next/script";
 // import example from "@/assets/img/example.jpg";
+// import {
+// 	Accordion,
+// 	AccordionContent,
+// 	AccordionItem,
+// 	AccordionTrigger,
+// } from "@/app/components/ui/accordion";
 import {
-	Accordion,
-	AccordionContent,
-	AccordionItem,
-	AccordionTrigger,
-} from "@/app/components/ui/accordion";
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuItem,
+	DropdownMenuLabel,
+	DropdownMenuSeparator,
+	DropdownMenuTrigger,
+} from "@/app/components/ui/dropdown-menu";
 
 export default function Home() {
 	return (
@@ -14,7 +22,7 @@ export default function Home() {
 			<h1 className="font-h1 text-base-soft-content">Hello World!</h1>
 			<div className="w-1/2 mx-auto perfect-center gap-4">
 				{/* - ACCORDION ----------------------------- */}
-				<Accordion type="single" collapsible>
+				{/* <Accordion type="single" collapsible>
 					<AccordionItem value="item-1">
 						<AccordionTrigger>Is it accessible?</AccordionTrigger>
 						<AccordionContent>
@@ -27,7 +35,19 @@ export default function Home() {
 							Yes. It adheres to the WAI-ARIA design pattern.
 						</AccordionContent>
 					</AccordionItem>
-				</Accordion>
+				</Accordion> */}
+
+				{/* - DROPDOWN ----------------------------- */}
+				<DropdownMenu>
+					<DropdownMenuTrigger>Open</DropdownMenuTrigger>
+					<DropdownMenuContent>
+						<DropdownMenuLabel>My Account</DropdownMenuLabel>
+						<DropdownMenuItem>Profile</DropdownMenuItem>
+						<DropdownMenuItem>Billing</DropdownMenuItem>
+						<DropdownMenuItem>Team</DropdownMenuItem>
+						<DropdownMenuItem>Subscription</DropdownMenuItem>
+					</DropdownMenuContent>
+				</DropdownMenu>
 
 				{/* local image */}
 				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">

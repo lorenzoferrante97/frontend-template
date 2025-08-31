@@ -3,7 +3,6 @@
 // import { ChevronDownIcon } from "lucide-react";
 import { CaretDownIcon } from "@phosphor-icons/react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
