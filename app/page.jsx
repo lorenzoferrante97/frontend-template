@@ -10,8 +10,10 @@
 import {
 	DropdownMenu,
 	DropdownMenuContent,
+	DropdownMenuGroup,
 	DropdownMenuItem,
 	DropdownMenuLabel,
+	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from "@/app/components/ui/dropdown-menu";
 
@@ -40,11 +42,18 @@ export default function Home() {
 				<DropdownMenu>
 					<DropdownMenuTrigger>Open</DropdownMenuTrigger>
 					<DropdownMenuContent>
-						<DropdownMenuLabel>My Account</DropdownMenuLabel>
-						<DropdownMenuItem>Profile</DropdownMenuItem>
-						<DropdownMenuItem>Billing</DropdownMenuItem>
-						<DropdownMenuItem>Team</DropdownMenuItem>
-						<DropdownMenuItem>Subscription</DropdownMenuItem>
+						<DropdownMenuGroup>
+							<DropdownMenuLabel>My Account</DropdownMenuLabel>
+							<DropdownMenuItem>Profile</DropdownMenuItem>
+							<DropdownMenuSeparator />
+							<DropdownMenuItem>Billing</DropdownMenuItem>
+						</DropdownMenuGroup>
+						<DropdownMenuGroup>
+							<DropdownMenuLabel>My Account</DropdownMenuLabel>
+							<DropdownMenuItem>Profile</DropdownMenuItem>
+							<DropdownMenuSeparator />
+							<DropdownMenuItem>Billing</DropdownMenuItem>
+						</DropdownMenuGroup>
 					</DropdownMenuContent>
 				</DropdownMenu>
 
