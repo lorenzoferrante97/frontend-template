@@ -1,5 +1,6 @@
 /** biome-ignore-all lint/correctness/noUnreachable: testing error */
 
+import { notFound } from "next/navigation"
 import { Suspense } from "react"
 import api from "@/utils/api"
 import WrapperForClient from "../components/WrapperForClient"
@@ -8,6 +9,10 @@ import Todos from "./Todos"
 import Users from "./Users"
 
 export default async function Blog() {
+  //simulazione not found
+  // const isFound = false
+  // if (!isFound) notFound()
+
   // simulazione errore per vedere error.jsx
   // throw new Error("Qualcosa è andato storto!")
 
