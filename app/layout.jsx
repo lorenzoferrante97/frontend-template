@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import Link from "next/link"
+import { generateGlobalMetadata } from "@/utils/metadata"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,11 +13,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 })
 
-export const metadata = {
-  title: "Next.js Frontend template",
-  description:
-    "Starting template for every frontend project made with Next.js, Talwind CSS v4, Motion",
-}
+// - SEO METADATA ------------------------------------------------------------------
+export const metadata = generateGlobalMetadata()
 
 export default function RootLayout({ children }) {
   return (
