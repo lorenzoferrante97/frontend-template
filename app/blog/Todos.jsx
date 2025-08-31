@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import api from "@/utils/api"
-import UsersSkeleton from "./UsersSkeleton"
+import UsersSkeleton from "./(skeletons)/UsersSkeleton"
 
 export default function Todos() {
   const [todos, setTodos] = useState([])

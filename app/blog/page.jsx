@@ -3,9 +3,9 @@
 import { Suspense } from "react"
 import api from "@/utils/api"
 import WrapperForClient from "../components/WrapperForClient"
+import UsersSkeleton from "./(skeletons)/UsersSkeleton"
 import Todos from "./Todos"
 import Users from "./Users"
-import UsersSkeleton from "./UsersSkeleton"
 
 export default async function Blog() {
   // simulazione errore per vedere error.jsx
