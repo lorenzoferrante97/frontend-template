@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Script from "next/script"
 import example from "@/assets/img/example.jpg"
 
 export default function Home() {
@@ -26,6 +27,17 @@ export default function Home() {
           />
         </figure>
       </div>
+
+      {/* - SCRIPTS ---------------------------------------------------------------------- */}
+
+      {/* <Script
+      onLoad={() => callbackOnLoad()}
+      onError={() => callbackOnError()}
+      src='link dello script'
+      strategy='afterInteractive' dopo che la pagina è interattiva, per analytics, widget...
+      - 'beforeInteractive' prima del rendering, per script essenziali al funzionamento
+      - 'lazyOnLoad' dopo il caricamento completo della page, per script non essenziali
+      /> */}
     </div>
   )
 }
