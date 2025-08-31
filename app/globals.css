@@ -2,6 +2,88 @@
 @import 'tailwindcss';
 @import "tw-animate-css";
 
+/* custom tailwind theme */
+@theme {
+  /* NOTE BREAKPOINTS ---------------------------------- */
+  --breakpoint-sm: 30rem; /* 480px */
+  --breakpoint-md: 48rem; /* 768px */
+  --breakpoint-lg: 64rem; /* 1024px */
+  --breakpoint-xl: 90rem; /* 1440px */
+
+  /* NOTE FONT SIZE ---------------------------------- */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.75rem;
+  --text-4xl: 2rem;
+  --text-5xl: 2.25rem;
+  --text-6xl: 2.5rem;
+  --text-7xl: 3rem;
+  --text-8xl: 3.5rem;
+  --text-9xl: 4rem;
+  --text-10xl: 4.5rem;
+  --text-11xl: 5rem;
+  --text-12xl: 5.75rem;
+  --text-13xl: 7.125rem;
+  --text-14xl: 7.875rem;
+  --text-15xl: 8.875rem;
+
+  /* NOTE LINE HEIGHT ---------------------------------- */
+  --leading-tight: 0.95;
+  --leading-default: 1;
+  --leading-normal: 1.25;
+  --leading-loose: 1.4;
+
+  /* NOTE LETTER SPACING ---------------------------------- */
+  --tracking-tighter: -0.008em;
+  --tracking-normal: 0em;
+  --tracking-widest: 0.008em;
+
+  /* NOTE BORDER RADIUS ---------------------------------- */
+  --radius-none: 0rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 2rem;
+  --radius-2xl: 4rem;
+  --radius-full: 900px;
+
+  /* NOTE SHADOWS ----------------------------------------- */
+  --shadow-sm: 0 4px 12px 0 rgb(0 0 0 / 0.04);
+  --shadow-md: 0 8px 24px 0px rgb(0 0 0 / 0.04);
+  --shadow-lg: 0 16px 36px -4px rgb(0 0 0 / 0.04);
+  --shadow-xl: 0 24px 48px -4px rgb(0 0 0 / 0.04);
+  --shadow-2xl: 0 32px 56px -4px rgb(0 0 0 / 0.08);
+
+  /* NOTE SPACING ----------------------------------------- */
+  --spacing-0: 0rem;
+  --spacing-px: 1px; 
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-2: 0.5rem; /* 8px */
+  --spacing-3: 0.75rem; 
+  --spacing-4: 1rem; /* 16px */
+  --spacing-5: 1.25rem; /* 20px */
+  --spacing-6: 1.5rem;
+  --spacing-7: 1.75rem; 
+  --spacing-8: 2rem; /* 32px */
+  --spacing-9: 2.25rem; 
+  --spacing-10: 2.5rem; /* 40px */
+  --spacing-12: 3rem; /* 48px */
+  --spacing-14: 3.5rem; /* 56px */
+  --spacing-16: 4rem;
+  --spacing-20: 5rem; /* 80px */
+  --spacing-24: 6rem; /* 96px */
+  --spacing-28: 7rem;
+  --spacing-36: 9rem; /* 144px */
+  --spacing-44: 11rem; 
+  --spacing-52: 13rem; /* 208px */
+  --spacing-60: 15rem;
+}
+
+
 /*---break--- */
 
 @custom-variant dark (&:is(.dark *));
@@ -421,6 +503,125 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-base-100 text-base-soft-content;
   }
+}
+
+/* ANCHOR UTILITIES ----------------------------------------------------------------- */
+
+@utility transition-base {
+  @apply transition-all duration-300 ease-in-out;
+}
+@utility focus-state {
+  @apply focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-black focus-visible:outline-0;
+}
+
+/* NOTE FONT -> Typefaces ----------------------------------------- */
+@utility font-heading {
+  font-family: var(--font-climate-crisis);
+}
+@utility font-body {
+  font-family: var(--font-figtree);
+}
+
+/* NOTE FONT -> Display ----------------------------------------- */
+@utility font-display-1 {
+  @apply lg:text-10xl text-8xl leading-none font-heading font-normal md:text-9xl;
+}
+@utility font-display-2 {
+  @apply text-7xl leading-none font-heading font-normal md:text-8xl lg:text-9xl;
+}
+@utility font-display-3 {
+  @apply text-6xl leading-none font-heading font-normal md:text-7xl lg:text-8xl;
+}
+
+/* NOTE FONT -> Headings ----------------------------------------- */
+@utility font-h1 {
+  @apply text-5xl font-heading leading-normal font-bold md:text-6xl lg:text-7xl;
+}
+@utility font-h2 {
+  @apply text-4xl font-heading  leading-normal font-bold md:text-5xl lg:text-6xl;
+}
+@utility font-h3 {
+  @apply text-2xl font-heading  leading-normal font-semibold md:text-3xl lg:text-4xl;
+}
+@utility font-h4 {
+  @apply text-xl font-heading  leading-normal font-semibold md:text-2xl lg:text-3xl;
+}
+@utility font-h5 {
+  @apply text-lg font-heading  leading-normal font-semibold md:text-xl lg:text-2xl;
+}
+@utility font-h6 {
+  @apply text-lg font-heading  leading-normal font-bold tracking-widest lg:text-xl;
+}
+
+/* NOTE FONT -> Body ----------------------------------------- */
+/* l */
+@utility font-body-l-small {
+  @apply text-2xl font-body  leading-loose font-light tracking-normal;
+}
+@utility font-body-l-normal {
+  @apply text-2xl font-body  leading-loose font-medium tracking-normal;
+}
+@utility font-body-l-big {
+  @apply text-2xl font-body  leading-loose font-bold tracking-widest;
+}
+
+/* m */
+@utility font-body-m-small {
+  @apply text-lg font-body  leading-loose font-light tracking-normal;
+}
+@utility font-body-m-normal {
+  @apply text-lg font-body  leading-loose font-normal tracking-normal;
+}
+@utility font-body-m-big {
+  @apply text-lg font-body  leading-loose font-bold -tracking-widest;
+}
+
+/* base */
+@utility font-body-base-normal {
+  @apply text-base font-body  leading-loose font-normal tracking-normal;
+}
+@utility font-body-base-big {
+  @apply text-base font-body  leading-loose font-semibold tracking-widest;
+}
+
+/* s */
+@utility font-body-s-normal {
+  @apply text-sm font-body  leading-loose font-normal tracking-normal;
+}
+@utility font-body-s-big {
+  @apply text-sm font-body  leading-loose font-semibold tracking-widest;
+}
+
+/* NOTE CONTAINERS ----------------------------------------- */
+@utility container-full {
+  @apply relative flex w-full flex-col items-stretch;
+}
+@utility container-responsive {
+  @apply relative mx-auto flex w-full flex-col items-stretch lg:max-w-[96%] xl:w-[92%] xl:max-w-[1440px];
+}
+@utility container-fixed {
+  @apply relative mx-auto flex w-[96%] flex-col items-stretch xl:w-[92%] xl:max-w-[1440px];
+}
+
+/* NOTE CONTAINERS -> Rows ----------------------------------------- */
+@utility row-flex {
+  @apply flex flex-col items-stretch;
+}
+@utility row-flex-responsive {
+  @apply flex flex-col items-stretch md:flex-row md:flex-wrap;
+}
+@utility row-grid {
+  @apply grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12;
+}
+
+/* NOTE PERFECT CENTER ----------------------------------------- */
+@utility perfect-center {
+  @apply flex items-center justify-center;
+}
+
+/* NOTE ABSOLUTE CENTER ----------------------------------------- */
+@utility absolute-center {
+  @apply top-1/2 left-1/2 translate-[-50%];
 }

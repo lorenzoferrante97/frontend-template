@@ -1,14 +1,36 @@
-import Image from "next/image";
+// import Image from "next/image";
 // import Script from "next/script";
-import example from "@/assets/img/example.jpg";
+// import example from "@/assets/img/example.jpg";
+import {
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
+} from "@/app/components/ui/accordion";
 
 export default function Home() {
 	return (
-		<div className="container-full h-[50vh] perfect-center gap-10 bg-base-300">
+		<div className="container-full h-[50vh] perfect-center gap-10">
 			<h1 className="font-h1 text-base-soft-content">Hello World!</h1>
-			<div className="w-full perfect-center gap-4">
+			<div className="w-1/2 mx-auto perfect-center gap-4">
+				{/* - ACCORDION ----------------------------- */}
+				<Accordion type="single" collapsible>
+					<AccordionItem value="item-1">
+						<AccordionTrigger>Is it accessible?</AccordionTrigger>
+						<AccordionContent>
+							Yes. It adheres to the WAI-ARIA design pattern.
+						</AccordionContent>
+					</AccordionItem>
+					<AccordionItem value="item-2">
+						<AccordionTrigger>Item Title 2?</AccordionTrigger>
+						<AccordionContent>
+							Yes. It adheres to the WAI-ARIA design pattern.
+						</AccordionContent>
+					</AccordionItem>
+				</Accordion>
+
 				{/* local image */}
-				<figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
+				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
 					<Image
 						alt="immagine di esempio"
 						className="object-cover"
@@ -16,16 +38,16 @@ export default function Home() {
 						placeholder="blur"
 						src={example}
 					/>
-				</figure>
+				</figure> */}
 				{/* url image */}
-				<figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
+				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
 					<Image
 						alt="immagine di esempio"
 						className="object-cover"
 						fill
 						src="https://images.unsplash.com/photo-1753262081045-ff9b365ef62a?q=80&w=2469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 					/>
-				</figure>
+				</figure> */}
 			</div>
 
 			{/* - SCRIPTS ---------------------------------------------------------------------- */}
