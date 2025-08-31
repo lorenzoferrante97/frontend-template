@@ -33,6 +33,8 @@ const generateGlobalMetadata = () => {
 			// ],
 		},
 
+		// - TWITTER METADATA --------------------------------------------------------------------
+
 		// Twitter Card default
 		twitter: {
 			card: "summary", // summary_large_image, app, player

@@ -1,3 +1,18 @@
+import { generateGlobalMetadata } from "@/utils/metadata"
+
+export async function generateMetadata({ params }) {
+  const global = generateGlobalMetadata()
+
+  // necessaria fetch del contenuto della page per poi inserire i corretti metadata
+  // const post = await api.fetchPostById(params.id)
+
+  return {
+    ...global,
+    // title: `${post.title} - ${global.title}`,
+    // ...
+  }
+}
+
 export default function Post({ params }) {
   const id = params.id
 
