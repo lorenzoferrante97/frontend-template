@@ -4,6 +4,9 @@
 
 /* ANCHOR THEME VARIABLES ----------------------------------------------------------------- */
 @theme {
+
+  /* NOTE COLORS ---------------------------------- */
+
   /* - Base -------------------------------- */
 
   --color-base-100: oklch(98% 0.003 247.858);
@@ -163,80 +166,90 @@
 }
 
 /* ANCHOR UTILITIES ----------------------------------------------------------------- */
+
 @utility transition-base {
   @apply transition-all duration-300 ease-in-out;
 }
 @utility focus-state {
   @apply focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-black focus-visible:outline-0;
 }
+
+/* NOTE FONT -> Typefaces ----------------------------------------- */
+@utility font-heading {
+  font-family: var(--font-climate-crisis);
+}
+@utility font-body {
+  font-family: var(--font-figtree);
+}
+
 /* NOTE FONT -> Display ----------------------------------------- */
 @utility font-display-1 {
-  @apply lg:text-10xl text-8xl leading-none font-normal md:text-9xl;
+  @apply lg:text-10xl text-8xl leading-none font-heading font-normal md:text-9xl;
 }
 @utility font-display-2 {
-  @apply text-7xl leading-none font-normal md:text-8xl lg:text-9xl;
+  @apply text-7xl leading-none font-heading font-normal md:text-8xl lg:text-9xl;
 }
 @utility font-display-3 {
-  @apply text-6xl leading-none font-normal md:text-7xl lg:text-8xl;
+  @apply text-6xl leading-none font-heading font-normal md:text-7xl lg:text-8xl;
 }
 
 /* NOTE FONT -> Headings ----------------------------------------- */
 @utility font-h1 {
-  @apply text-5xl leading-normal font-bold md:text-6xl lg:text-7xl;
+  @apply text-5xl font-heading leading-normal font-bold md:text-6xl lg:text-7xl;
 }
 @utility font-h2 {
-  @apply text-4xl leading-normal font-bold md:text-5xl lg:text-6xl;
+  @apply text-4xl font-heading  leading-normal font-bold md:text-5xl lg:text-6xl;
 }
 @utility font-h3 {
-  @apply text-2xl leading-normal font-semibold md:text-3xl lg:text-4xl;
+  @apply text-2xl font-heading  leading-normal font-semibold md:text-3xl lg:text-4xl;
 }
 @utility font-h4 {
-  @apply text-xl leading-normal font-semibold md:text-2xl lg:text-3xl;
+  @apply text-xl font-heading  leading-normal font-semibold md:text-2xl lg:text-3xl;
 }
 @utility font-h5 {
-  @apply text-lg leading-normal font-semibold md:text-xl lg:text-2xl;
+  @apply text-lg font-heading  leading-normal font-semibold md:text-xl lg:text-2xl;
 }
 @utility font-h6 {
-  @apply text-lg leading-normal font-bold tracking-widest lg:text-xl;
+  @apply text-lg font-heading  leading-normal font-bold tracking-widest lg:text-xl;
 }
 
 /* NOTE FONT -> Body ----------------------------------------- */
 /* l */
 @utility font-body-l-small {
-  @apply text-2xl leading-loose font-light tracking-normal;
+  @apply text-2xl font-body  leading-loose font-light tracking-normal;
 }
 @utility font-body-l-normal {
-  @apply text-2xl leading-loose font-medium tracking-normal;
+  @apply text-2xl font-body  leading-loose font-medium tracking-normal;
 }
 @utility font-body-l-big {
-  @apply text-2xl leading-loose font-bold tracking-widest;
+  @apply text-2xl font-body  leading-loose font-bold tracking-widest;
 }
 
 /* m */
 @utility font-body-m-small {
-  @apply text-lg leading-loose font-light tracking-normal;
+  @apply text-lg font-body  leading-loose font-light tracking-normal;
 }
 @utility font-body-m-normal {
-  @apply text-lg leading-loose font-normal tracking-normal;
+  @apply text-lg font-body  leading-loose font-normal tracking-normal;
 }
 @utility font-body-m-big {
-  @apply text-lg leading-loose font-bold -tracking-widest;
+  @apply text-lg font-body  leading-loose font-bold -tracking-widest;
 }
 
 /* base */
 @utility font-body-base-normal {
-  @apply text-base leading-loose font-normal tracking-normal;
+  @apply text-base font-body  leading-loose font-normal tracking-normal;
 }
 @utility font-body-base-big {
-  @apply text-base leading-loose font-semibold tracking-widest;
+  @apply text-base font-body  leading-loose font-semibold tracking-widest;
 }
 
 /* s */
 @utility font-body-s-normal {
-  @apply text-sm leading-loose font-normal tracking-normal;
+  @apply text-sm font-body  leading-loose font-normal tracking-normal;
 }
 @utility font-body-s-big {
-  @apply text-sm leading-loose font-semibold tracking-widest;
+  @apply text-sm font-body  leading-loose font-semibold tracking-widest;
 }
 
 /* NOTE CONTAINERS ----------------------------------------- */
