@@ -1,55 +1,94 @@
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
+import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
+
+// button styles
+const buttonStyle = {
+	default: "rounded-full font-body-base-big lg:hover:cursor-pointer",
+	neutral: {
+		default:
+			"bg-custom-neutral text-custom-neutral-content lg:hover:bg-custom-neutral/75 lg:hover:text-white lg:hover:dark:text-black",
+		secondary:
+			"bg-custom-neutral-soft text-custom-neutral-soft-content lg:hover:bg-custom-neutral-soft/75 lg:hover:text-black lg:hover:dark:text-white",
+		ghost: "text-custom-neutral lg:hover:text-black lg:hover:dark:text-white",
+		link: "text-custom-neutral lg:hover:text-black lg:hover:dark:text-white",
+	},
+	primary: {
+		default:
+			"bg-custom-primary text-custom-primary-content lg:hover:bg-custom-primary/75 lg:hover:text-white lg:hover:dark:text-black",
+		secondary:
+			"bg-custom-primary-soft text-custom-primary-soft-content lg:hover:bg-custom-primary-soft/75 lg:hover:text-black lg:hover:dark:text-white",
+		ghost: "text-custom-primary lg:hover:text-black lg:hover:dark:text-white",
+		link: "text-custom-primary lg:hover:text-black lg:hover:dark:text-white",
+	},
+	secondary: {
+		default:
+			"bg-custom-secondary text-custom-secondary-content lg:hover:bg-custom-secondary/75 lg:hover:text-white lg:hover:dark:text-black",
+		secondary:
+			"bg-custom-secondary-soft text-custom-secondary-soft-content lg:hover:bg-custom-secondary-soft/75 lg:hover:text-black lg:hover:dark:text-white",
+		ghost: "text-custom-secondary lg:hover:text-black lg:hover:dark:text-white",
+		link: "text-custom-secondary lg:hover:text-black lg:hover:dark:text-white",
+	},
+	accent: {
+		default:
+			"bg-custom-accent text-custom-accent-content lg:hover:bg-custom-accent/75 lg:hover:text-white lg:hover:dark:text-black",
+		secondary:
+			"bg-custom-accent-soft text-custom-accent-soft-content lg:hover:bg-custom-accent-soft/75 lg:hover:text-black lg:hover:dark:text-white",
+		ghost: "text-custom-accent lg:hover:text-black lg:hover:dark:text-white",
+		link: "text-custom-accent lg:hover:text-black lg:hover:dark:text-white",
+	},
+	error: {
+		default:
+			"bg-custom-error text-custom-error-content lg:hover:bg-custom-error/75 lg:hover:text-white lg:hover:dark:text-black",
+		secondary:
+			"bg-custom-error-soft text-custom-error-soft-content lg:hover:bg-custom-error-soft/75 lg:hover:text-black lg:hover:dark:text-white",
+		ghost: "text-custom-error lg:hover:text-black lg:hover:dark:text-white",
+		link: "text-custom-error lg:hover:text-black lg:hover:dark:text-white",
+	},
+};
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
-  {
-    variants: {
-      variant: {
-        default:
-          "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
-        outline:
-          "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
-        secondary:
-          "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
-        ghost:
-          "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
-        link: "text-primary underline-offset-4 hover:underline",
-      },
-      size: {
-        default: "h-9 px-4 py-2 has-[>svg]:px-3",
-        sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
-        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
-        icon: "size-9",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
-      size: "default",
-    },
-  }
-)
+	`inline-flex perfect-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-state aria-invalid:ring-custom-error aria-invalid:border-custom-error-soft ${buttonStyle.default}`,
+	{
+		variants: {
+			variant: {
+				default: "not-dark:shadow-lg",
+				secondary: "",
+				ghost: "lg:hover:underline lg:hover:underline-offset-4",
+				link: "underline-offset-4 underline hover:underline-offset-1",
+			},
+			size: {
+				default: "max-lg:min-h-12 px-4 py-2",
+				sm: "max-lg:min-h-10 px-2 max-lg:py-0 py-1 font-body-s-big",
+				lg: "max-lg:min-h-12 px-6 py-3",
+				icon: "w-fit aspect-square p-2 max-lg:min-w-12",
+			},
+		},
+		defaultVariants: {
+			variant: "default",
+			size: "default",
+		},
+	},
+);
 
 function Button({
-  className,
-  variant,
-  size,
-  asChild = false,
-  ...props
+	className,
+	variant,
+	size,
+	color,
+	asChild = false,
+	...props
 }) {
-  const Comp = asChild ? Slot : "button"
+	const Comp = asChild ? Slot : "button";
 
-  return (
-    <Comp
-      data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
-      {...props} />
-  );
+	return (
+		<Comp
+			data-slot="button"
+			className={`${cn(buttonVariants({ variant, size, className }))} ${buttonStyle[color][variant]}`}
+			{...props}
+		/>
+	);
 }
 
-export { Button, buttonVariants }
+export { Button, buttonVariants };

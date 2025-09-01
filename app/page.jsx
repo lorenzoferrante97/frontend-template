@@ -1,3 +1,5 @@
+import { ArrowBigRight } from "lucide-react";
+
 // import Image from "next/image";
 // import Script from "next/script";
 // import example from "@/assets/img/example.jpg";
@@ -36,6 +38,8 @@
 // 	BreadcrumbPage,
 // 	BreadcrumbSeparator,
 // } from "@/app/components/ui/breadcrumb";
+
+import { Button } from "@/app/components/ui/button";
 
 export default function Home() {
 	return (
@@ -121,6 +125,13 @@ export default function Home() {
 						</BreadcrumbItem>
 					</BreadcrumbList>
 				</Breadcrumb> */}
+
+				{/* - Button ----------------------------- */}
+
+				<Button color="accent" variant="default" size="default">
+					<ArrowBigRight size={12} strokeWidth={2} className="-ml-1" />
+					Button
+				</Button>
 
 				{/* local image */}
 				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
