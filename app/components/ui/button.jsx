@@ -1,3 +1,5 @@
+"use client";
+
 import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
 
@@ -62,7 +64,7 @@ const buttonVariants = cva(
 				default: "max-lg:min-h-12 px-4 py-2",
 				sm: "max-lg:min-h-10 px-2 max-lg:py-0 py-1 font-body-s-big",
 				lg: "max-lg:min-h-12 px-6 py-3",
-				icon: "w-fit aspect-square p-2 max-lg:min-w-12",
+				icon: "w-fit aspect-square p-2 max-lg:min-w-12 max-sm:w-fit",
 			},
 		},
 		defaultVariants: {

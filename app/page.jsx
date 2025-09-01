@@ -1,5 +1,3 @@
-import { ArrowBigRight } from "lucide-react";
-
 import Image from "next/image";
 // import Script from "next/script";
 // import example from "@/assets/img/example.jpg";
@@ -27,7 +25,7 @@ import Image from "next/image";
 // 	AvatarImage,
 // } from "@/app/components/ui/avatar";
 
-import { Badge } from "@/app/components/ui/badge";
+// import { Badge } from "@/app/components/ui/badge";
 
 // import {
 // 	Breadcrumb,
@@ -39,17 +37,25 @@ import { Badge } from "@/app/components/ui/badge";
 // 	BreadcrumbSeparator,
 // } from "@/app/components/ui/breadcrumb";
 
-import { Button } from "@/app/components/ui/button";
+// import { Button } from "@/app/components/ui/button";
+
+// import {
+// 	Card,
+// 	CardAction,
+// 	CardContent,
+// 	CardDescription,
+// 	CardFooter,
+// 	CardHeader,
+// 	CardTitle,
+// } from "@/app/components/ui/card";
 
 import {
-	Card,
-	CardAction,
-	CardContent,
-	CardDescription,
-	CardFooter,
-	CardHeader,
-	CardTitle,
-} from "@/app/components/ui/card";
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from "@/app/components/ui/carousel";
 
 export default function Home() {
 	return (
@@ -144,7 +150,7 @@ export default function Home() {
 				</Button> */}
 
 				{/* - Card ----------------------------- */}
-				<Card className="max-sm:w-full w-72 h-fit">
+				{/* <Card className="max-sm:w-full w-72 h-fit">
 					<CardContent>
 						<figure className="aspect-video relative rounded-md overflow-hidden">
 							<Image
@@ -169,7 +175,44 @@ export default function Home() {
 							Card Action
 						</Button>
 					</CardFooter>
-				</Card>
+				</Card> */}
+
+				{/* - Carousel ----------------------------- */}
+				<Carousel
+					opts={{
+						loop: true,
+						slidesToScroll: 1,
+					}}
+					orientation="horizontal"
+					className="w-full"
+				>
+					<CarouselContent>
+						<CarouselItem>
+							<figure className="size-full relative rounded-md overflow-hidden">
+								<Image
+									alt="immagine di esempio"
+									className="object-cover"
+									fill
+									src="https://images.unsplash.com/photo-1755429518361-1d6060edcf3c?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+								/>
+							</figure>
+						</CarouselItem>
+						<CarouselItem>
+							<figure className="size-full relative rounded-md overflow-hidden">
+								<Image
+									alt="immagine di esempio"
+									className="object-cover"
+									fill
+									src="https://images.unsplash.com/photo-1743452548596-7095486ee7e9?q=80&w=2221&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+								/>
+							</figure>
+						</CarouselItem>
+					</CarouselContent>
+					<div className="w-full flex items-center justify-between">
+						<CarouselPrevious />
+						<CarouselNext />
+					</div>
+				</Carousel>
 
 				{/* local image */}
 				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
