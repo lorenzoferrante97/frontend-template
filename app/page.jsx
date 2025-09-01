@@ -57,6 +57,8 @@ import Image from "next/image";
 // 	CarouselPrevious,
 // } from "@/app/components/ui/carousel";
 
+import { Checkbox } from "@/app/components/ui/checkbox";
+
 export default function Home() {
 	return (
 		<div className="container-full h-[50vh] perfect-center gap-10">
@@ -203,6 +205,9 @@ export default function Home() {
 						<CarouselNext />
 					</div>
 				</Carousel> */}
+
+				{/* - Checkbox ----------------------------- */}
+				<Checkbox />
 
 				{/* local image */}
 				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
