@@ -17,7 +17,13 @@
 // 	DropdownMenuTrigger,
 // } from "@/app/components/ui/dropdown-menu";
 
-import { Alert, AlertDescription, AlertTitle } from "@/app/components/ui/alert";
+// import { Alert, AlertDescription, AlertTitle } from "@/app/components/ui/alert";
+
+import {
+	Avatar,
+	AvatarFallback,
+	AvatarImage,
+} from "@/app/components/ui/avatar";
 
 export default function Home() {
 	return (
@@ -60,12 +66,24 @@ export default function Home() {
 				</DropdownMenu> */}
 
 				{/* - Alert ----------------------------- */}
-				<Alert variant="default">
+				{/* <Alert variant="default">
 					<AlertTitle>Heads up!</AlertTitle>
 					<AlertDescription>
 						You can add components and dependencies to your app using the cli.
 					</AlertDescription>
-				</Alert>
+				</Alert> */}
+
+				{/* - Avatar ----------------------------- */}
+				<div className="flex items-center -space-x-4">
+					<Avatar>
+						<AvatarImage src="https://images.unsplash.com/photo-1728887823143-d92d2ebbb53a?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+						<AvatarFallback>CN</AvatarFallback>
+					</Avatar>
+					<Avatar>
+						<AvatarImage src="https://images.unsplash.com/photo-1728577740843-5f29c7586afe?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+						<AvatarFallback>CN</AvatarFallback>
+					</Avatar>
+				</div>
 
 				{/* local image */}
 				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
