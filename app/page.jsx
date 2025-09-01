@@ -49,13 +49,13 @@ import Image from "next/image";
 // 	CardTitle,
 // } from "@/app/components/ui/card";
 
-import {
-	Carousel,
-	CarouselContent,
-	CarouselItem,
-	CarouselNext,
-	CarouselPrevious,
-} from "@/app/components/ui/carousel";
+// import {
+// 	Carousel,
+// 	CarouselContent,
+// 	CarouselItem,
+// 	CarouselNext,
+// 	CarouselPrevious,
+// } from "@/app/components/ui/carousel";
 
 export default function Home() {
 	return (
@@ -178,7 +178,7 @@ export default function Home() {
 				</Card> */}
 
 				{/* - Carousel ----------------------------- */}
-				<Carousel
+				{/* <Carousel
 					opts={{
 						loop: true,
 						slidesToScroll: 1,
@@ -202,7 +202,7 @@ export default function Home() {
 						<CarouselPrevious />
 						<CarouselNext />
 					</div>
-				</Carousel>
+				</Carousel> */}
 
 				{/* local image */}
 				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
