@@ -27,15 +27,15 @@
 
 // import { Badge } from "@/app/components/ui/badge";
 
-import {
-	Breadcrumb,
-	BreadcrumbItem,
-	BreadcrumbLink,
-	BreadcrumbList,
-	BreadcrumbMore,
-	BreadcrumbPage,
-	BreadcrumbSeparator,
-} from "@/app/components/ui/breadcrumb";
+// import {
+// 	Breadcrumb,
+// 	BreadcrumbItem,
+// 	BreadcrumbLink,
+// 	BreadcrumbList,
+// 	BreadcrumbMore,
+// 	BreadcrumbPage,
+// 	BreadcrumbSeparator,
+// } from "@/app/components/ui/breadcrumb";
 
 export default function Home() {
 	return (
@@ -104,7 +104,7 @@ export default function Home() {
 				</Badge> */}
 
 				{/* - Breadcrumb ----------------------------- */}
-				<Breadcrumb>
+				{/* <Breadcrumb>
 					<BreadcrumbList>
 						<BreadcrumbItem>
 							<BreadcrumbLink href="/">Home</BreadcrumbLink>
@@ -120,7 +120,7 @@ export default function Home() {
 							<BreadcrumbPage>Breadcrumb</BreadcrumbPage>
 						</BreadcrumbItem>
 					</BreadcrumbList>
-				</Breadcrumb>
+				</Breadcrumb> */}
 
 				{/* local image */}
 				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
