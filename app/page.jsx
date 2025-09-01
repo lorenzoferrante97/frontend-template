@@ -188,24 +188,14 @@ export default function Home() {
 				>
 					<CarouselContent>
 						<CarouselItem>
-							<figure className="size-full relative rounded-md overflow-hidden">
-								<Image
-									alt="immagine di esempio"
-									className="object-cover"
-									fill
-									src="https://images.unsplash.com/photo-1755429518361-1d6060edcf3c?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-								/>
-							</figure>
+							<div className="size-full perfect-center bg-custom-primary-soft text-custom-primary-soft-content rounded-lg">
+								Slide 1
+							</div>
 						</CarouselItem>
 						<CarouselItem>
-							<figure className="size-full relative rounded-md overflow-hidden">
-								<Image
-									alt="immagine di esempio"
-									className="object-cover"
-									fill
-									src="https://images.unsplash.com/photo-1743452548596-7095486ee7e9?q=80&w=2221&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-								/>
-							</figure>
+							<div className="size-full perfect-center bg-custom-secondary-soft text-custom-secondary-soft-content rounded-lg">
+								Slide 2
+							</div>
 						</CarouselItem>
 					</CarouselContent>
 					<div className="w-full flex items-center justify-between">

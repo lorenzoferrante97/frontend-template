@@ -156,7 +156,7 @@ function CarouselItem({ className, ...props }) {
 			aria-roledescription="slide"
 			data-slot="carousel-item"
 			className={cn(
-				`rounded-lg overflow-hidden shrink-0 grow-0 ${carouselStyle.item} perfect-center`,
+				`overflow-hidden shrink-0 grow-0 ${carouselStyle.item} perfect-center`,
 				orientation === "horizontal" ? "px-2" : "py-2",
 				className,
 			)}
