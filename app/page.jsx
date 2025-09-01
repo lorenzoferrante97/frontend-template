@@ -25,7 +25,16 @@
 // 	AvatarImage,
 // } from "@/app/components/ui/avatar";
 
-import { Badge } from "@/app/components/ui/badge";
+// import { Badge } from "@/app/components/ui/badge";
+
+import {
+	Breadcrumb,
+	BreadcrumbItem,
+	BreadcrumbLink,
+	BreadcrumbList,
+	BreadcrumbPage,
+	BreadcrumbSeparator,
+} from "@/app/components/ui/breadcrumb";
 
 export default function Home() {
 	return (
@@ -88,10 +97,27 @@ export default function Home() {
 				</div> */}
 
 				{/* - Badge ----------------------------- */}
-				<Badge variant="default">Badge</Badge>
+				{/* <Badge variant="default">Badge</Badge>
 				<Badge asChild variant="default">
 					<a href="/">link</a>
-				</Badge>
+				</Badge> */}
+
+				{/* - Breadcrumb ----------------------------- */}
+				<Breadcrumb>
+					<BreadcrumbList>
+						<BreadcrumbItem>
+							<BreadcrumbLink href="/">Home</BreadcrumbLink>
+						</BreadcrumbItem>
+						<BreadcrumbSeparator />
+						<BreadcrumbItem>
+							<BreadcrumbLink href="/components">Components</BreadcrumbLink>
+						</BreadcrumbItem>
+						<BreadcrumbSeparator />
+						<BreadcrumbItem>
+							<BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+						</BreadcrumbItem>
+					</BreadcrumbList>
+				</Breadcrumb>
 
 				{/* local image */}
 				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
