@@ -32,6 +32,7 @@ import {
 	BreadcrumbItem,
 	BreadcrumbLink,
 	BreadcrumbList,
+	BreadcrumbMore,
 	BreadcrumbPage,
 	BreadcrumbSeparator,
 } from "@/app/components/ui/breadcrumb";
@@ -108,6 +109,8 @@ export default function Home() {
 						<BreadcrumbItem>
 							<BreadcrumbLink href="/">Home</BreadcrumbLink>
 						</BreadcrumbItem>
+						<BreadcrumbSeparator />
+						<BreadcrumbMore />
 						<BreadcrumbSeparator />
 						<BreadcrumbItem>
 							<BreadcrumbLink href="/components">Components</BreadcrumbLink>

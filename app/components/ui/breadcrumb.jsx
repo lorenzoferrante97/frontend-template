@@ -1,7 +1,7 @@
+/** biome-ignore-all lint/a11y/useSemanticElements: current page */
+
 import { Slot } from "@radix-ui/react-slot";
 import { ChevronRight, MoreHorizontal } from "lucide-react";
-import * as React from "react";
-
 import { cn } from "@/lib/utils";
 
 function Breadcrumb({ ...props }) {
@@ -13,7 +13,7 @@ function BreadcrumbList({ className, ...props }) {
 		<ol
 			data-slot="breadcrumb-list"
 			className={cn(
-				"text-muted-foreground flex flex-wrap items-center gap-1.5 text-sm break-words sm:gap-2.5",
+				"text-base-soft-content/80 flex flex-wrap items-center gap-1 font-body-s-normal break-words md:gap-2",
 				className,
 			)}
 			{...props}
@@ -25,7 +25,7 @@ function BreadcrumbItem({ className, ...props }) {
 	return (
 		<li
 			data-slot="breadcrumb-item"
-			className={cn("inline-flex items-center gap-1.5", className)}
+			className={cn("inline-flex items-center gap-1", className)}
 			{...props}
 		/>
 	);
@@ -37,7 +37,10 @@ function BreadcrumbLink({ asChild, className, ...props }) {
 	return (
 		<Comp
 			data-slot="breadcrumb-link"
-			className={cn("hover:text-foreground transition-colors", className)}
+			className={cn(
+				"lg:hover:text-base-content lg:hover:underline lg:hover:underline-offset-4 transition-colors",
+				className,
+			)}
 			{...props}
 		/>
 	);
@@ -45,12 +48,12 @@ function BreadcrumbLink({ asChild, className, ...props }) {
 
 function BreadcrumbPage({ className, ...props }) {
 	return (
-		<span
+		<a
 			data-slot="breadcrumb-page"
 			role="link"
 			aria-disabled="true"
 			aria-current="page"
-			className={cn("text-foreground font-normal", className)}
+			className={cn("text-base-content font-body-s-big", className)}
 			{...props}
 		/>
 	);
@@ -62,24 +65,24 @@ function BreadcrumbSeparator({ children, className, ...props }) {
 			data-slot="breadcrumb-separator"
 			role="presentation"
 			aria-hidden="true"
-			className={cn("[&>svg]:size-3.5", className)}
+			className={cn("", className)}
 			{...props}
 		>
-			{children ?? <ChevronRight />}
+			{children ?? <ChevronRight size={12} strokeWidth={2} />}
 		</li>
 	);
 }
 
-function BreadcrumbEllipsis({ className, ...props }) {
+function BreadcrumbMore({ className, ...props }) {
 	return (
 		<span
 			data-slot="breadcrumb-ellipsis"
 			role="presentation"
 			aria-hidden="true"
-			className={cn("flex size-9 items-center justify-center", className)}
+			className={cn("perfect-center", className)}
 			{...props}
 		>
-			<MoreHorizontal className="size-4" />
+			<MoreHorizontal size={12} strokeWidth={2} />
 			<span className="sr-only">More</span>
 		</span>
 	);
@@ -92,5 +95,5 @@ export {
 	BreadcrumbLink,
 	BreadcrumbPage,
 	BreadcrumbSeparator,
-	BreadcrumbEllipsis,
+	BreadcrumbMore,
 };
