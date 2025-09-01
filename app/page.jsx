@@ -39,7 +39,7 @@ import { ArrowBigRight } from "lucide-react";
 // 	BreadcrumbSeparator,
 // } from "@/app/components/ui/breadcrumb";
 
-import { Button } from "@/app/components/ui/button";
+// import { Button } from "@/app/components/ui/button";
 
 export default function Home() {
 	return (
@@ -128,10 +128,10 @@ export default function Home() {
 
 				{/* - Button ----------------------------- */}
 
-				<Button color="accent" variant="default" size="default">
+				{/* <Button color="accent" variant="default" size="default">
 					<ArrowBigRight size={12} strokeWidth={2} className="-ml-1" />
 					Button
-				</Button>
+				</Button> */}
 
 				{/* local image */}
 				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
