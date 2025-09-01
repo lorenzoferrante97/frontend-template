@@ -49,7 +49,7 @@ const buttonStyle = {
 };
 
 const buttonVariants = cva(
-	`inline-flex perfect-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-state aria-invalid:ring-custom-error aria-invalid:border-custom-error-soft ${buttonStyle.default}`,
+	`max-sm:w-full inline-flex perfect-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none focus-state aria-invalid:ring-custom-error aria-invalid:border-custom-error-soft ${buttonStyle.default}`,
 	{
 		variants: {
 			variant: {

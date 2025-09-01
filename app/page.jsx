@@ -1,6 +1,6 @@
 import { ArrowBigRight } from "lucide-react";
 
-// import Image from "next/image";
+import Image from "next/image";
 // import Script from "next/script";
 // import example from "@/assets/img/example.jpg";
 // import {
@@ -27,7 +27,7 @@ import { ArrowBigRight } from "lucide-react";
 // 	AvatarImage,
 // } from "@/app/components/ui/avatar";
 
-// import { Badge } from "@/app/components/ui/badge";
+import { Badge } from "@/app/components/ui/badge";
 
 // import {
 // 	Breadcrumb,
@@ -39,7 +39,17 @@ import { ArrowBigRight } from "lucide-react";
 // 	BreadcrumbSeparator,
 // } from "@/app/components/ui/breadcrumb";
 
-// import { Button } from "@/app/components/ui/button";
+import { Button } from "@/app/components/ui/button";
+
+import {
+	Card,
+	CardAction,
+	CardContent,
+	CardDescription,
+	CardFooter,
+	CardHeader,
+	CardTitle,
+} from "@/app/components/ui/card";
 
 export default function Home() {
 	return (
@@ -132,6 +142,34 @@ export default function Home() {
 					<ArrowBigRight size={12} strokeWidth={2} className="-ml-1" />
 					Button
 				</Button> */}
+
+				{/* - Card ----------------------------- */}
+				<Card className="max-sm:w-full w-72 h-fit">
+					<CardContent>
+						<figure className="aspect-video relative rounded-md overflow-hidden">
+							<Image
+								alt="immagine di esempio"
+								className="object-cover"
+								fill
+								src="https://images.unsplash.com/photo-1753262081045-ff9b365ef62a?q=80&w=2469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+							/>
+						</figure>
+					</CardContent>
+					<CardHeader>
+						<Badge variant="secondary">Badge</Badge>
+						<div>
+							<CardTitle>Card Title</CardTitle>
+							<CardDescription>
+								Card Description Card desc C Descr Ca C Card desc Card Descr Ca
+							</CardDescription>
+						</div>
+					</CardHeader>
+					<CardFooter>
+						<Button color="primary" variant="default" size="default">
+							Card Action
+						</Button>
+					</CardFooter>
+				</Card>
 
 				{/* local image */}
 				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
