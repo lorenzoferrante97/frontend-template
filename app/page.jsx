@@ -19,11 +19,13 @@
 
 // import { Alert, AlertDescription, AlertTitle } from "@/app/components/ui/alert";
 
-import {
-	Avatar,
-	AvatarFallback,
-	AvatarImage,
-} from "@/app/components/ui/avatar";
+// import {
+// 	Avatar,
+// 	AvatarFallback,
+// 	AvatarImage,
+// } from "@/app/components/ui/avatar";
+
+import { Badge } from "@/app/components/ui/badge";
 
 export default function Home() {
 	return (
@@ -74,7 +76,7 @@ export default function Home() {
 				</Alert> */}
 
 				{/* - Avatar ----------------------------- */}
-				<div className="flex items-center -space-x-4">
+				{/* <div className="flex items-center -space-x-4">
 					<Avatar>
 						<AvatarImage src="https://images.unsplash.com/photo-1728887823143-d92d2ebbb53a?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
 						<AvatarFallback>CN</AvatarFallback>
@@ -83,7 +85,13 @@ export default function Home() {
 						<AvatarImage src="https://images.unsplash.com/photo-1728577740843-5f29c7586afe?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
 						<AvatarFallback>CN</AvatarFallback>
 					</Avatar>
-				</div>
+				</div> */}
+
+				{/* - Badge ----------------------------- */}
+				<Badge variant="default">Badge</Badge>
+				<Badge asChild variant="default">
+					<a href="/">link</a>
+				</Badge>
 
 				{/* local image */}
 				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">

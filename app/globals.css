@@ -520,7 +520,7 @@
   @apply transition-all duration-300 ease-in-out;
 }
 @utility focus-state {
-  @apply focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-black focus-visible:outline-0;
+  @apply focus-visible:ring-2 focus-visible:ring-offset-4 dark:focus-visible:ring-white focus-visible:ring-black focus-visible:outline-0;
 }
 
 /* NOTE FONT -> Typefaces ----------------------------------------- */
