@@ -210,7 +210,7 @@
 
   --color-custom-success: var(--custom-success);
   --color-custom-success-content: var(--custom-success-content);
-  --color-custom-success-soft: var(--custom-info-soft);
+  --color-custom-success-soft: var(--custom-success-soft);
   --color-custom-success-soft-content: var(--custom-success-soft-content);
 
   /* - Warning ---------------- */

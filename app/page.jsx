@@ -7,15 +7,17 @@
 // 	AccordionItem,
 // 	AccordionTrigger,
 // } from "@/app/components/ui/accordion";
-import {
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuGroup,
-	DropdownMenuItem,
-	DropdownMenuLabel,
-	DropdownMenuSeparator,
-	DropdownMenuTrigger,
-} from "@/app/components/ui/dropdown-menu";
+// import {
+// 	DropdownMenu,
+// 	DropdownMenuContent,
+// 	DropdownMenuGroup,
+// 	DropdownMenuItem,
+// 	DropdownMenuLabel,
+// 	DropdownMenuSeparator,
+// 	DropdownMenuTrigger,
+// } from "@/app/components/ui/dropdown-menu";
+
+import { Alert, AlertDescription, AlertTitle } from "@/app/components/ui/alert";
 
 export default function Home() {
 	return (
@@ -39,7 +41,7 @@ export default function Home() {
 				</Accordion> */}
 
 				{/* - DROPDOWN ----------------------------- */}
-				<DropdownMenu>
+				{/* <DropdownMenu>
 					<DropdownMenuTrigger>Open</DropdownMenuTrigger>
 					<DropdownMenuContent>
 						<DropdownMenuGroup>
@@ -55,7 +57,15 @@ export default function Home() {
 							<DropdownMenuItem>Billing</DropdownMenuItem>
 						</DropdownMenuGroup>
 					</DropdownMenuContent>
-				</DropdownMenu>
+				</DropdownMenu> */}
+
+				{/* - Alert ----------------------------- */}
+				<Alert variant="default">
+					<AlertTitle>Heads up!</AlertTitle>
+					<AlertDescription>
+						You can add components and dependencies to your app using the cli.
+					</AlertDescription>
+				</Alert>
 
 				{/* local image */}
 				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
