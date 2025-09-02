@@ -71,11 +71,11 @@
 // 	DialogTrigger,
 // } from "@/app/components/ui/dialog";
 
-import {
-	HoverCard,
-	HoverCardContent,
-	HoverCardTrigger,
-} from "@/app/components/ui/hover-card";
+// import {
+// 	HoverCard,
+// 	HoverCardContent,
+// 	HoverCardTrigger,
+// } from "@/app/components/ui/hover-card";
 
 export default function Home() {
 	return (
@@ -250,12 +250,12 @@ export default function Home() {
 				</Dialog> */}
 
 				{/* - Hover card ----------------------------- */}
-				<HoverCard>
+				{/* <HoverCard>
 					<HoverCardTrigger>Hover</HoverCardTrigger>
 					<HoverCardContent>
 						The React Framework, created and maintained by @vercel.
 					</HoverCardContent>
-				</HoverCard>
+				</HoverCard> */}
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 
