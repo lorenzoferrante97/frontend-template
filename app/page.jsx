@@ -38,7 +38,7 @@
 // 	BreadcrumbSeparator,
 // } from "@/app/components/ui/breadcrumb";
 
-import { Button } from "@/app/components/ui/button";
+// import { Button } from "@/app/components/ui/button";
 
 // import {
 // 	Card,
@@ -61,15 +61,15 @@ import { Button } from "@/app/components/ui/button";
 // import { Checkbox } from "@/app/components/ui/checkbox";
 // import { Label } from "@/app/components/ui/label";
 
-import {
-	Dialog,
-	DialogContent,
-	DialogDescription,
-	DialogFooter,
-	DialogHeader,
-	DialogTitle,
-	DialogTrigger,
-} from "@/app/components/ui/dialog";
+// import {
+// 	Dialog,
+// 	DialogContent,
+// 	DialogDescription,
+// 	DialogFooter,
+// 	DialogHeader,
+// 	DialogTitle,
+// 	DialogTrigger,
+// } from "@/app/components/ui/dialog";
 
 export default function Home() {
 	return (
@@ -224,7 +224,7 @@ export default function Home() {
 					<Label htmlFor="email">Your email address</Label>
 				</div> */}
 
-				<Dialog>
+				{/* <Dialog>
 					<DialogTrigger>Open</DialogTrigger>
 					<DialogContent>
 						<DialogHeader>
@@ -240,7 +240,7 @@ export default function Home() {
 							</Button>
 						</DialogFooter>
 					</DialogContent>
-				</Dialog>
+				</Dialog> */}
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 
