@@ -632,3 +632,13 @@
 @utility absolute-center {
   @apply top-1/2 left-1/2 translate-[-50%];
 }
+
+/* ANCHOR CUSTOM CSS -------------------------------------------------------------------- */
+
+/* NOTE input type file ----------------- */
+input[type="file"]::file-selector-button {
+  @apply bg-base-200 px-2 py-1 rounded-sm h-full mr-2;
+}
+input[type="file"] {
+  @apply pl-1;
+}

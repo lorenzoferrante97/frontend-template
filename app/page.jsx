@@ -77,13 +77,15 @@
 // 	HoverCardTrigger,
 // } from "@/app/components/ui/hover-card";
 
+import { Input } from "@/app/components/ui/input"
+
 export default function Home() {
-	return (
-		<div className="container-full h-[50vh] perfect-center gap-10">
-			<h1 className="font-h1 text-base-soft-content">Hello World!</h1>
-			<div className="w-1/2 mx-auto perfect-center gap-4">
-				{/* - ACCORDION ----------------------------- */}
-				{/* <Accordion type="single" collapsible>
+  return (
+    <div className='container-full h-[50vh] perfect-center gap-10'>
+      <h1 className='font-h1 text-base-soft-content'>Hello World!</h1>
+      <div className='md:w-1/2 w-[92%] mx-auto perfect-center gap-4'>
+        {/* - ACCORDION ----------------------------- */}
+        {/* <Accordion type="single" collapsible>
 					<AccordionItem value="item-1">
 						<AccordionTrigger>Is it accessible?</AccordionTrigger>
 						<AccordionContent>
@@ -98,8 +100,8 @@ export default function Home() {
 					</AccordionItem>
 				</Accordion> */}
 
-				{/* - DROPDOWN ----------------------------- */}
-				{/* <DropdownMenu>
+        {/* - DROPDOWN ----------------------------- */}
+        {/* <DropdownMenu>
 					<DropdownMenuTrigger>Open</DropdownMenuTrigger>
 					<DropdownMenuContent>
 						<DropdownMenuGroup>
@@ -117,16 +119,16 @@ export default function Home() {
 					</DropdownMenuContent>
 				</DropdownMenu> */}
 
-				{/* - Alert ----------------------------- */}
-				{/* <Alert variant="default">
+        {/* - Alert ----------------------------- */}
+        {/* <Alert variant="default">
 					<AlertTitle>Heads up!</AlertTitle>
 					<AlertDescription>
 						You can add components and dependencies to your app using the cli.
 					</AlertDescription>
 				</Alert> */}
 
-				{/* - Avatar ----------------------------- */}
-				{/* <div className="flex items-center -space-x-4">
+        {/* - Avatar ----------------------------- */}
+        {/* <div className="flex items-center -space-x-4">
 					<Avatar>
 						<AvatarImage src="https://images.unsplash.com/photo-1728887823143-d92d2ebbb53a?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
 						<AvatarFallback>CN</AvatarFallback>
@@ -137,14 +139,14 @@ export default function Home() {
 					</Avatar>
 				</div> */}
 
-				{/* - Badge ----------------------------- */}
-				{/* <Badge variant="default">Badge</Badge>
+        {/* - Badge ----------------------------- */}
+        {/* <Badge variant="default">Badge</Badge>
 				<Badge asChild variant="default">
 					<a href="/">link</a>
 				</Badge> */}
 
-				{/* - Breadcrumb ----------------------------- */}
-				{/* <Breadcrumb>
+        {/* - Breadcrumb ----------------------------- */}
+        {/* <Breadcrumb>
 					<BreadcrumbList>
 						<BreadcrumbItem>
 							<BreadcrumbLink href="/">Home</BreadcrumbLink>
@@ -162,15 +164,15 @@ export default function Home() {
 					</BreadcrumbList>
 				</Breadcrumb> */}
 
-				{/* - Button ----------------------------- */}
+        {/* - Button ----------------------------- */}
 
-				{/* <Button color="accent" variant="default" size="default">
+        {/* <Button color="accent" variant="default" size="default">
 					<ArrowBigRight size={12} strokeWidth={2} className="-ml-1" />
 					Button
 				</Button> */}
 
-				{/* - Card ----------------------------- */}
-				{/* <Card className="max-sm:w-full w-72 h-fit">
+        {/* - Card ----------------------------- */}
+        {/* <Card className="max-sm:w-full w-72 h-fit">
 					<CardContent>
 						<figure className="aspect-video relative rounded-md overflow-hidden">
 							<Image
@@ -197,8 +199,8 @@ export default function Home() {
 					</CardFooter>
 				</Card> */}
 
-				{/* - Carousel ----------------------------- */}
-				{/* <Carousel
+        {/* - Carousel ----------------------------- */}
+        {/* <Carousel
 					opts={{
 						loop: true,
 						slidesToScroll: 1,
@@ -224,14 +226,14 @@ export default function Home() {
 					</div>
 				</Carousel> */}
 
-				{/* - Checkbox ----------------------------- */}
-				{/* <div className="flex items-center gap-2">
+        {/* - Checkbox ----------------------------- */}
+        {/* <div className="flex items-center gap-2">
 					<Checkbox id="email" />
 					<Label htmlFor="email">Your email address</Label>
 				</div> */}
 
-				{/* - Dialog ----------------------------- */}
-				{/* <Dialog>
+        {/* - Dialog ----------------------------- */}
+        {/* <Dialog>
 					<DialogTrigger>Open</DialogTrigger>
 					<DialogContent>
 						<DialogHeader>
@@ -249,18 +251,24 @@ export default function Home() {
 					</DialogContent>
 				</Dialog> */}
 
-				{/* - Hover card ----------------------------- */}
-				{/* <HoverCard>
+        {/* - Hover card ----------------------------- */}
+        {/* <HoverCard>
 					<HoverCardTrigger>Hover</HoverCardTrigger>
 					<HoverCardContent>
 						The React Framework, created and maintained by @vercel.
 					</HoverCardContent>
 				</HoverCard> */}
 
-				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
+        {/* - Input ----------------------------- */}
+        <div className='flex flex-col gap-2'>
+          <Input type='file' />
+          <Input placeholder='Scrivi qui...' type='text' />
+        </div>
 
-				{/* local image */}
-				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
+        {/* - LOCAL IMG ---------------------------------------------------------------------- */}
+
+        {/* local image */}
+        {/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
 					<Image
 						alt="immagine di esempio"
 						className="object-cover"
@@ -269,8 +277,8 @@ export default function Home() {
 						src={example}
 					/>
 				</figure> */}
-				{/* url image */}
-				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
+        {/* url image */}
+        {/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
 					<Image
 						alt="immagine di esempio"
 						className="object-cover"
@@ -278,11 +286,11 @@ export default function Home() {
 						src="https://images.unsplash.com/photo-1753262081045-ff9b365ef62a?q=80&w=2469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 					/>
 				</figure> */}
-			</div>
+      </div>
 
-			{/* - SCRIPTS ---------------------------------------------------------------------- */}
+      {/* - SCRIPTS ---------------------------------------------------------------------- */}
 
-			{/* <Script
+      {/* <Script
       onLoad={() => callbackOnLoad()}
       onError={() => callbackOnError()}
       src='link dello script'
@@ -290,6 +298,6 @@ export default function Home() {
       - 'beforeInteractive' prima del rendering, per script essenziali al funzionamento
       - 'lazyOnLoad' dopo il caricamento completo della page, per script non essenziali
       /> */}
-		</div>
-	);
+    </div>
+  )
 }
