@@ -1,73 +1,74 @@
 "use client"
 
-import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { MinusIcon } from "lucide-react"
+import { useContext } from "react"
 
 import { cn } from "@/lib/utils"
 
-function InputOTP({
-  className,
-  containerClassName,
-  ...props
-}) {
+const inputOtpStyle = {
+  group: "p-2 rounded-lg bg-base-200 perfect-center gap-1",
+  slot: "focus-state data-[active=true]:ring-2 data-[active=true]:not-dark:shadow-md data-[active=true]:not-dark:shadow-base-content/10 bg-base-100 dark:bg-base-300 border dark:border-custom-neutral-soft border-base-300 size-10 lg:size-12 font-body-l-big rounded-md text-base-soft-content",
+  fakeCaret: "bg-base-soft-content rounded-full h-4 w-[2px]",
+}
+
+// - INPUT OTP ROOT ------------------------------------------------------
+function InputOTP({ className, containerClassName, ...props }) {
   return (
     <OTPInput
-      data-slot="input-otp"
-      containerClassName={cn("flex items-center gap-2 has-disabled:opacity-50", containerClassName)}
       className={cn("disabled:cursor-not-allowed", className)}
-      {...props} />
-  );
+      containerClassName={cn("flex items-center gap-2 has-disabled:opacity-50", containerClassName)}
+      data-slot='input-otp'
+      {...props}
+    />
+  )
 }
 
-function InputOTPGroup({
-  className,
-  ...props
-}) {
+// - INPUT OTP GROUP ------------------------------------------------------
+function InputOTPGroup({ className, ...props }) {
   return (
     <div
-      data-slot="input-otp-group"
-      className={cn("flex items-center", className)}
-      {...props} />
-  );
+      className={cn(`${inputOtpStyle.group}`, className)}
+      data-slot='input-otp-group'
+      {...props}
+    />
+  )
 }
 
-function InputOTPSlot({
-  index,
-  className,
-  ...props
-}) {
-  const inputOTPContext = React.useContext(OTPInputContext)
+// - INPUT OTP SLOT ------------------------------------------------------
+function InputOTPSlot({ index, className, ...props }) {
+  const inputOTPContext = useContext(OTPInputContext)
   const { char, hasFakeCaret, isActive } = inputOTPContext?.slots[index] ?? {}
 
   return (
     <div
-      data-slot="input-otp-slot"
-      data-active={isActive}
       className={cn(
-        "data-[active=true]:border-ring data-[active=true]:ring-ring/50 data-[active=true]:aria-invalid:ring-destructive/20 dark:data-[active=true]:aria-invalid:ring-destructive/40 aria-invalid:border-destructive data-[active=true]:aria-invalid:border-destructive dark:bg-input/30 border-input relative flex h-9 w-9 items-center justify-center border-y border-r text-sm shadow-xs transition-all outline-none first:rounded-l-md first:border-l last:rounded-r-md data-[active=true]:z-10 data-[active=true]:ring-[3px]",
+        `data-[active=true]:aria-invalid:ring-custom-error aria-invalid:border-custom-error-soft data-[active=true]:aria-invalid:border-custom-error relative perfect-center transition-all outline-none data-[active=true]:z-10 ${inputOtpStyle.slot}`,
         className
       )}
+      data-active={isActive}
+      data-slot='input-otp-slot'
       {...props}>
       {char}
       {hasFakeCaret && (
-        <div
-          className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <div className="animate-caret-blink bg-foreground h-4 w-px duration-1000" />
+        <div className='pointer-events-none absolute inset-0 perfect-center'>
+          <div className={`animate-caret-blink duration-1000 ${inputOtpStyle.fakeCaret}`} />
         </div>
       )}
     </div>
-  );
+  )
 }
 
-function InputOTPSeparator({
-  ...props
-}) {
+// - INPUT OTP SEPARATOR ------------------------------------------------------
+function InputOTPSeparator({ ...props }) {
   return (
-    <div data-slot="input-otp-separator" role="separator" {...props}>
-      <MinusIcon />
+    // biome-ignore lint/a11y/useFocusableInteractive: separator
+    // biome-ignore lint/a11y/useSemanticElements: custom separator
+    // biome-ignore lint/a11y/useAriaPropsForRole: custom separator
+    <div data-slot='input-otp-separator' role='separator' {...props}>
+      <MinusIcon className='text-base-soft-content' size={20} strokeWidth={2} />
     </div>
-  );
+  )
 }
 
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }

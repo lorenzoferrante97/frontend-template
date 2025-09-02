@@ -79,6 +79,13 @@
 
 // import { Input } from "@/app/components/ui/input"
 
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSeparator,
+  InputOTPSlot,
+} from "@/app/components/ui/input-otp"
+
 export default function Home() {
   return (
     <div className='container-full h-[50vh] perfect-center gap-10'>
@@ -264,6 +271,21 @@ export default function Home() {
           <Input type='file' />
           <Input placeholder='Scrivi qui...' type='text' />
         </div> */}
+
+        {/* - Input OTP ----------------------------- */}
+        <InputOTP maxLength={6}>
+          <InputOTPGroup>
+            <InputOTPSlot index={0} />
+            <InputOTPSlot index={1} />
+            <InputOTPSlot index={2} />
+          </InputOTPGroup>
+          <InputOTPSeparator />
+          <InputOTPGroup>
+            <InputOTPSlot index={3} />
+            <InputOTPSlot index={4} />
+            <InputOTPSlot index={5} />
+          </InputOTPGroup>
+        </InputOTP>
 
         {/* - LOCAL IMG ---------------------------------------------------------------------- */}
 
