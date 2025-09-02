@@ -71,6 +71,12 @@
 // 	DialogTrigger,
 // } from "@/app/components/ui/dialog";
 
+import {
+	HoverCard,
+	HoverCardContent,
+	HoverCardTrigger,
+} from "@/app/components/ui/hover-card";
+
 export default function Home() {
 	return (
 		<div className="container-full h-[50vh] perfect-center gap-10">
@@ -224,6 +230,7 @@ export default function Home() {
 					<Label htmlFor="email">Your email address</Label>
 				</div> */}
 
+				{/* - Dialog ----------------------------- */}
 				{/* <Dialog>
 					<DialogTrigger>Open</DialogTrigger>
 					<DialogContent>
@@ -241,6 +248,14 @@ export default function Home() {
 						</DialogFooter>
 					</DialogContent>
 				</Dialog> */}
+
+				{/* - Hover card ----------------------------- */}
+				<HoverCard>
+					<HoverCardTrigger>Hover</HoverCardTrigger>
+					<HoverCardContent>
+						The React Framework, created and maintained by @vercel.
+					</HoverCardContent>
+				</HoverCard>
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 
