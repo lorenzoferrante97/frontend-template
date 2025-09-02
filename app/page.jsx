@@ -79,12 +79,12 @@
 
 // import { Input } from "@/app/components/ui/input"
 
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSeparator,
-  InputOTPSlot,
-} from "@/app/components/ui/input-otp"
+// import {
+//   InputOTP,
+//   InputOTPGroup,
+//   InputOTPSeparator,
+//   InputOTPSlot,
+// } from "@/app/components/ui/input-otp"
 
 export default function Home() {
   return (
@@ -273,7 +273,7 @@ export default function Home() {
         </div> */}
 
         {/* - Input OTP ----------------------------- */}
-        <InputOTP maxLength={6}>
+        {/* <InputOTP maxLength={6}>
           <InputOTPGroup>
             <InputOTPSlot index={0} />
             <InputOTPSlot index={1} />
@@ -285,7 +285,7 @@ export default function Home() {
             <InputOTPSlot index={4} />
             <InputOTPSlot index={5} />
           </InputOTPGroup>
-        </InputOTP>
+        </InputOTP> */}
 
         {/* - LOCAL IMG ---------------------------------------------------------------------- */}
 
