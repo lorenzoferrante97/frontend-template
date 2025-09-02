@@ -38,7 +38,7 @@
 // 	BreadcrumbSeparator,
 // } from "@/app/components/ui/breadcrumb";
 
-// import { Button } from "@/app/components/ui/button";
+import { Button } from "@/app/components/ui/button";
 
 // import {
 // 	Card,
@@ -58,9 +58,18 @@
 // 	CarouselPrevious,
 // } from "@/app/components/ui/carousel";
 
-import { Checkbox } from "@/app/components/ui/checkbox";
-import { Label } from "@/app/components/ui/label";
-import { isNode } from "../node_modules/detect-node-es/esm/browser";
+// import { Checkbox } from "@/app/components/ui/checkbox";
+// import { Label } from "@/app/components/ui/label";
+
+import {
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogFooter,
+	DialogHeader,
+	DialogTitle,
+	DialogTrigger,
+} from "@/app/components/ui/dialog";
 
 export default function Home() {
 	return (
@@ -210,10 +219,30 @@ export default function Home() {
 				</Carousel> */}
 
 				{/* - Checkbox ----------------------------- */}
-				<div className="flex items-center gap-2">
+				{/* <div className="flex items-center gap-2">
 					<Checkbox id="email" />
 					<Label htmlFor="email">Your email address</Label>
-				</div>
+				</div> */}
+
+				<Dialog>
+					<DialogTrigger>Open</DialogTrigger>
+					<DialogContent>
+						<DialogHeader>
+							<DialogTitle>Are you absolutely sure?</DialogTitle>
+							<DialogDescription>
+								This action cannot be undone. This will permanently delete your
+								account and remove your data from our servers.
+							</DialogDescription>
+						</DialogHeader>
+						<DialogFooter>
+							<Button color="error" variant="default" size="default">
+								Button
+							</Button>
+						</DialogFooter>
+					</DialogContent>
+				</Dialog>
+
+				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 
 				{/* local image */}
 				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
