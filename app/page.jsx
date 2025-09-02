@@ -77,7 +77,7 @@
 // 	HoverCardTrigger,
 // } from "@/app/components/ui/hover-card";
 
-import { Input } from "@/app/components/ui/input"
+// import { Input } from "@/app/components/ui/input"
 
 export default function Home() {
   return (
@@ -260,10 +260,10 @@ export default function Home() {
 				</HoverCard> */}
 
         {/* - Input ----------------------------- */}
-        <div className='flex flex-col gap-2'>
+        {/* <div className='flex flex-col gap-2'>
           <Input type='file' />
           <Input placeholder='Scrivi qui...' type='text' />
-        </div>
+        </div> */}
 
         {/* - LOCAL IMG ---------------------------------------------------------------------- */}
 
