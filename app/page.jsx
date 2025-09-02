@@ -1,4 +1,5 @@
-import Image from "next/image";
+/** biome-ignore-all lint/correctness/useUniqueElementIds: unique ids */
+// import Image from "next/image";
 // import Script from "next/script";
 // import example from "@/assets/img/example.jpg";
 // import {
@@ -58,6 +59,8 @@ import Image from "next/image";
 // } from "@/app/components/ui/carousel";
 
 import { Checkbox } from "@/app/components/ui/checkbox";
+import { Label } from "@/app/components/ui/label";
+import { isNode } from "../node_modules/detect-node-es/esm/browser";
 
 export default function Home() {
 	return (
@@ -207,7 +210,10 @@ export default function Home() {
 				</Carousel> */}
 
 				{/* - Checkbox ----------------------------- */}
-				<Checkbox />
+				<div className="flex items-center gap-2">
+					<Checkbox id="email" />
+					<Label htmlFor="email">Your email address</Label>
+				</div>
 
 				{/* local image */}
 				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">

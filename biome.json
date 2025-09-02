@@ -23,7 +23,8 @@
       "recommended": true,
       "correctness": {
         "noUnusedVariables": "off",
-        "noUnusedImports": "off"
+        "noUnusedImports": "off",
+        "useUniqueElementIds": "off"
       },
       "complexity": {
         "noCommaOperator": "off"
