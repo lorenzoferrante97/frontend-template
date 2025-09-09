@@ -37,7 +37,7 @@ function PaginationItem({ ...props }) {
 
 function PaginationLink({ className, isActive, size = "icon", ...props }) {
   return (
-    <a
+    <Link
       aria-current={isActive ? "page" : undefined}
       className={`inline-flex w-fit font-body-s-big text-base-soft-content perfect-center max-lg:min-w-10 min-w-5 gap-1 ${size === "icon" ? "aspect-square" : undefined} ${className} $`}
       data-active={isActive}

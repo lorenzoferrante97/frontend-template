@@ -97,15 +97,15 @@
 //   navigationMenuTriggerStyle,
 // } from "@/app/components/ui/navigation-menu"
 
-import {
-	Pagination,
-	PaginationContent,
-	PaginationEllipsis,
-	PaginationItem,
-	PaginationLink,
-	PaginationNext,
-	PaginationPrevious,
-} from "@/app/components/ui/pagination";
+// import {
+// 	Pagination,
+// 	PaginationContent,
+// 	PaginationEllipsis,
+// 	PaginationItem,
+// 	PaginationLink,
+// 	PaginationNext,
+// 	PaginationPrevious,
+// } from "@/app/components/ui/pagination";
 
 export default function Home() {
 	return (
@@ -332,7 +332,7 @@ export default function Home() {
         </NavigationMenu> */}
 
 				{/* - Pagination ------------------------- */}
-				<Pagination>
+				{/* <Pagination>
 					<PaginationContent>
 						<PaginationItem>
 							<PaginationPrevious href="#" />
@@ -350,7 +350,7 @@ export default function Home() {
 							<PaginationNext href="#" />
 						</PaginationItem>
 					</PaginationContent>
-				</Pagination>
+				</Pagination> */}
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 
