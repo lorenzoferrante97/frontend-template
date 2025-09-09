@@ -108,7 +108,7 @@
 // } from "@/app/components/ui/pagination";
 
 import { Label } from "@/app/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { RadioGroup, RadioGroupItem } from "@/app/components/ui/radio-group";
 
 export default function Home() {
 	return (
@@ -357,11 +357,11 @@ export default function Home() {
 
 				{/* - Radio Group ------------------------- */}
 				<RadioGroup defaultValue="option-one">
-					<div className="flex items-center space-x-2">
+					<div className="flex items-center gap-2">
 						<RadioGroupItem value="option-one" id="option-one" />
 						<Label htmlFor="option-one">Option One</Label>
 					</div>
-					<div className="flex items-center space-x-2">
+					<div className="flex items-center gap-2">
 						<RadioGroupItem value="option-two" id="option-two" />
 						<Label htmlFor="option-two">Option Two</Label>
 					</div>
