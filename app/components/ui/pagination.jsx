@@ -1,110 +1,100 @@
+import { ChevronLeftIcon, ChevronRightIcon, MoreHorizontalIcon } from "lucide-react"
 import * as React from "react"
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  MoreHorizontalIcon,
-} from "lucide-react"
-
+import { Button } from "@/app/components/ui/button"
 import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/app/components/ui/button";
 
-function Pagination({
-  className,
-  ...props
-}) {
+const paginationStyle = {
+  previousNext:
+    "min-h-10 rounded-md bg-base-200 border border-base-300 disabled:opacity-50 hover:bg-base-300 hover:text-base-content transition-colors mx-2",
+  activePage: "rounded-full bg-custom-neutral text-custom-neutral-content",
+}
+
+function Pagination({ className, ...props }) {
   return (
     <nav
-      role="navigation"
-      aria-label="pagination"
-      data-slot="pagination"
-      className={cn("mx-auto flex w-full justify-center", className)}
-      {...props} />
-  );
+      aria-label='pagination'
+      className={cn("w-full perfect-center", className)}
+      data-slot='pagination'
+      // role='navigation'
+      {...props}
+    />
+  )
 }
 
-function PaginationContent({
-  className,
-  ...props
-}) {
+function PaginationContent({ className, ...props }) {
   return (
     <ul
-      data-slot="pagination-content"
-      className={cn("flex flex-row items-center gap-1", className)}
-      {...props} />
-  );
+      className={cn("w-full perfect-center gap-1", className)}
+      data-slot='pagination-content'
+      {...props}
+    />
+  )
 }
 
-function PaginationItem({
-  ...props
-}) {
-  return <li data-slot="pagination-item" {...props} />;
+function PaginationItem({ ...props }) {
+  return <li className='perfect-center' data-slot='pagination-item' {...props} />
 }
 
-function PaginationLink({
-  className,
-  isActive,
-  size = "icon",
-  ...props
-}) {
+function PaginationLink({ className, isActive, size = "icon", ...props }) {
   return (
     <a
       aria-current={isActive ? "page" : undefined}
-      data-slot="pagination-link"
+      className={`inline-flex w-fit font-body-s-big text-base-soft-content perfect-center max-lg:min-w-10 min-w-5 gap-1 ${size === "icon" ? "aspect-square" : undefined} ${className} $`}
       data-active={isActive}
-      className={cn(buttonVariants({
-        variant: isActive ? "outline" : "ghost",
-        size,
-      }), className)}
-      {...props} />
-  );
+      data-slot='pagination-link'
+      {...props}
+    />
+  )
 }
 
-function PaginationPrevious({
-  className,
-  ...props
-}) {
+function PaginationPrevious({ className, ...props }) {
   return (
     <PaginationLink
-      aria-label="Go to previous page"
-      size="default"
-      className={cn("gap-1 px-2.5 sm:pl-2.5", className)}
+      aria-label='Pagina precedente'
+      className={cn(
+        "h-10 sm:h-fit sm:pr-2 sm:pl-1 sm:py-1",
+        paginationStyle.previousNext,
+        className
+      )}
+      size='default'
       {...props}>
-      <ChevronLeftIcon />
-      <span className="hidden sm:block">Previous</span>
+      <ChevronLeftIcon size={16} strokeWidth={2} />
+      <span className='hidden sm:block'>Indietro</span>
     </PaginationLink>
-  );
+  )
 }
 
-function PaginationNext({
-  className,
-  ...props
-}) {
+function PaginationNext({ className, ...props }) {
   return (
     <PaginationLink
-      aria-label="Go to next page"
-      size="default"
-      className={cn("gap-1 px-2.5 sm:pr-2.5", className)}
+      aria-label='Go to next page'
+      className={cn(
+        "h-10 sm:h-fit sm:pr-1 sm:pl-2 sm:py-1",
+        paginationStyle.previousNext,
+        className
+      )}
+      size='default'
       {...props}>
-      <span className="hidden sm:block">Next</span>
-      <ChevronRightIcon />
+      <span className='hidden sm:block'>Avanti</span>
+      <ChevronRightIcon size={16} strokeWidth={2} />
     </PaginationLink>
-  );
+  )
 }
 
-function PaginationEllipsis({
-  className,
-  ...props
-}) {
+function PaginationEllipsis({ className, ...props }) {
   return (
     <span
       aria-hidden
-      data-slot="pagination-ellipsis"
-      className={cn("flex size-9 items-center justify-center", className)}
+      className={cn(
+        "perfect-center inline-flex w-fit max-lg:min-w-10 min-w-5 aspect-square",
+        className
+      )}
+      data-slot='pagination-ellipsis'
       {...props}>
-      <MoreHorizontalIcon className="size-4" />
-      <span className="sr-only">More pages</span>
+      <MoreHorizontalIcon size={16} />
+      <span className='sr-only'>Altre pagine</span>
     </span>
-  );
+  )
 }
 
 export {
