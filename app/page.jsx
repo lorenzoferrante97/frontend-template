@@ -107,8 +107,10 @@
 // 	PaginationPrevious,
 // } from "@/app/components/ui/pagination";
 
-import { Label } from "@/app/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/app/components/ui/radio-group";
+// import { Label } from "@/app/components/ui/label";
+// import { RadioGroup, RadioGroupItem } from "@/app/components/ui/radio-group";
+
+import { ScrollArea } from "@/app/components/ui/scroll-area";
 
 export default function Home() {
 	return (
@@ -356,7 +358,7 @@ export default function Home() {
 				</Pagination> */}
 
 				{/* - Radio Group ------------------------- */}
-				<RadioGroup defaultValue="option-one">
+				{/* <RadioGroup defaultValue="option-one">
 					<div className="flex items-center gap-2">
 						<RadioGroupItem value="option-one" id="option-one" />
 						<Label htmlFor="option-one">Option One</Label>
@@ -365,7 +367,18 @@ export default function Home() {
 						<RadioGroupItem value="option-two" id="option-two" />
 						<Label htmlFor="option-two">Option Two</Label>
 					</div>
-				</RadioGroup>
+				</RadioGroup> */}
+
+				{/* - Scroll Area ------------------------- */}
+				<ScrollArea className="h-[200px] w-[350px] rounded-md border p-4">
+					Jokester began sneaking into the castle in the middle of the night and
+					leaving jokes all over the place: under the king's pillow, in his
+					soup, even in the royal toilet. The king was furious, but he couldn't
+					seem to stop Jokester. And then, one day, the people of the kingdom
+					discovered that the jokes left by Jokester were so funny that they
+					couldn't help but laugh. And once they started laughing, they couldn't
+					stop.
+				</ScrollArea>
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 
