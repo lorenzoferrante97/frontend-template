@@ -1,3 +1,5 @@
-export default function WrapperForClient({ Component, componentProps }) {
-  return <Component {...componentProps} />
+"use client";
+
+export default function WrapperForClient({ childen }) {
+	return <>{childen}</>;
 }

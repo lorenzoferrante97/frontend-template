@@ -39,7 +39,7 @@
 // 	BreadcrumbSeparator,
 // } from "@/app/components/ui/breadcrumb";
 
-// import { Button } from "@/app/components/ui/button";
+import { Button } from "@/app/components/ui/button";
 
 // import {
 // 	Card,
@@ -134,7 +134,9 @@
 
 // import { Skeleton } from "@/app/components/ui/skeleton";
 
-import { Slider } from "@/app/components/ui/slider";
+// import { Slider } from "@/app/components/ui/slider";
+
+import WrapperForClient from "./components/WrapperForClient";
 
 export default function Home() {
 	return (
@@ -156,7 +158,6 @@ export default function Home() {
 						</AccordionContent>
 					</AccordionItem>
 				</Accordion> */}
-
 				{/* - DROPDOWN ----------------------------- */}
 				{/* <DropdownMenu>
 					<DropdownMenuTrigger>Open</DropdownMenuTrigger>
@@ -175,7 +176,6 @@ export default function Home() {
 						</DropdownMenuGroup>
 					</DropdownMenuContent>
 				</DropdownMenu> */}
-
 				{/* - Alert ----------------------------- */}
 				{/* <Alert variant="default">
 					<AlertTitle>Heads up!</AlertTitle>
@@ -183,7 +183,6 @@ export default function Home() {
 						You can add components and dependencies to your app using the cli.
 					</AlertDescription>
 				</Alert> */}
-
 				{/* - Avatar ----------------------------- */}
 				{/* <div className="flex items-center -space-x-4">
 					<Avatar>
@@ -195,13 +194,11 @@ export default function Home() {
 						<AvatarFallback>CN</AvatarFallback>
 					</Avatar>
 				</div> */}
-
 				{/* - Badge ----------------------------- */}
 				{/* <Badge variant="default">Badge</Badge>
 				<Badge asChild variant="default">
 					<a href="/">link</a>
 				</Badge> */}
-
 				{/* - Breadcrumb ----------------------------- */}
 				{/* <Breadcrumb>
 					<BreadcrumbList>
@@ -220,14 +217,11 @@ export default function Home() {
 						</BreadcrumbItem>
 					</BreadcrumbList>
 				</Breadcrumb> */}
-
 				{/* - Button ----------------------------- */}
-
 				{/* <Button color="accent" variant="default" size="default">
 					<ArrowBigRight size={12} strokeWidth={2} className="-ml-1" />
 					Button
 				</Button> */}
-
 				{/* - Card ----------------------------- */}
 				{/* <Card className="max-sm:w-full w-72 h-fit">
 					<CardContent>
@@ -255,7 +249,6 @@ export default function Home() {
 						</Button>
 					</CardFooter>
 				</Card> */}
-
 				{/* - Carousel ----------------------------- */}
 				{/* <Carousel
 					opts={{
@@ -282,13 +275,11 @@ export default function Home() {
 						<CarouselNext />
 					</div>
 				</Carousel> */}
-
 				{/* - Checkbox ----------------------------- */}
 				{/* <div className="flex items-center gap-2">
 					<Checkbox id="email" />
 					<Label htmlFor="email">Your email address</Label>
 				</div> */}
-
 				{/* - Dialog ----------------------------- */}
 				{/* <Dialog>
 					<DialogTrigger>Open</DialogTrigger>
@@ -307,7 +298,6 @@ export default function Home() {
 						</DialogFooter>
 					</DialogContent>
 				</Dialog> */}
-
 				{/* - Hover card ----------------------------- */}
 				{/* <HoverCard>
 					<HoverCardTrigger>Hover</HoverCardTrigger>
@@ -315,13 +305,11 @@ export default function Home() {
 						The React Framework, created and maintained by @vercel.
 					</HoverCardContent>
 				</HoverCard> */}
-
 				{/* - Input ----------------------------- */}
 				{/* <div className='flex flex-col gap-2'>
           <Input type='file' />
           <Input placeholder='Scrivi qui...' type='text' />
         </div> */}
-
 				{/* - Input OTP ----------------------------- */}
 				{/* <InputOTP maxLength={6}>
           <InputOTPGroup>
@@ -336,7 +324,6 @@ export default function Home() {
             <InputOTPSlot index={5} />
           </InputOTPGroup>
         </InputOTP> */}
-
 				{/* - Nav Menu ----------------------------- */}
 				{/* <NavigationMenu className='w-full' viewport={false}>
           <NavigationMenuList>
@@ -359,7 +346,6 @@ export default function Home() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu> */}
-
 				{/* - Pagination ------------------------- */}
 				{/* <Pagination>
 					<PaginationContent>
@@ -380,7 +366,6 @@ export default function Home() {
 						</PaginationItem>
 					</PaginationContent>
 				</Pagination> */}
-
 				{/* - Radio Group ------------------------- */}
 				{/* <RadioGroup defaultValue="option-one">
 					<div className="flex items-center gap-2">
@@ -392,7 +377,6 @@ export default function Home() {
 						<Label htmlFor="option-two">Option Two</Label>
 					</div>
 				</RadioGroup> */}
-
 				{/* - Scroll Area ------------------------- */}
 				{/* <ScrollArea direction="vertical" className="h-[200px] w-[350px]">
 					<div className="flex flex-col items-stretch h-max w-full space-y-2">
@@ -401,7 +385,6 @@ export default function Home() {
 						<div className="h-[280px] perfect-center bg-base-200">C</div>
 					</div>
 				</ScrollArea> */}
-
 				{/* - Select ------------------------- */}
 				{/* <Select>
 					<SelectTrigger className="w-[180px]">
@@ -422,7 +405,6 @@ export default function Home() {
 						</SelectGroup>
 					</SelectContent>
 				</Select> */}
-
 				{/* - Sheet ------------------------- */}
 				{/* <Sheet>
 					<SheetTrigger>Open</SheetTrigger>
@@ -436,15 +418,24 @@ export default function Home() {
 						</SheetHeader>
 					</SheetContent>
 				</Sheet> */}
-
 				{/* - Skeleton ------------------------- */}
 				{/* <Skeleton className="h-[20px] w-[100px] rounded-full" /> */}
-
 				{/* - Slider ------------------------- */}
-				<Slider defaultValue={[50]} max={100} min={0} step={1} />
+				{/* <Slider defaultValue={[50]} max={100} min={0} step={1} /> */}
+
+				{/* - Toast ------------------------- */}
+				{/* <Button
+					onClick={handleClickToToast}
+					color="neutral"
+					variant="default"
+					size="default"
+				>
+					Trigger a toast
+				</Button> */}
+
+				<WrapperForClient></WrapperForClient>
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
-
 				{/* local image */}
 				{/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
 					<Image

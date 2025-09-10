@@ -1,9 +1,12 @@
 import { Climate_Crisis, Figtree } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { Toaster } from "@/app/components/ui/sonner";
 import { generateGlobalMetadata } from "@/utils/metadata";
 import ThemeDropdown from "./components/ThemeDropdown";
 import ThemeProvider from "./components/ThemeProvider";
+
+// import WrapperForClient from "./components/WrapperForClient";
 
 const figtree = Figtree({
 	variable: "--font-figtree",
@@ -52,6 +55,12 @@ export default function RootLayout({ children }) {
 						{/* <Link prefetch={false />  ---> impedisce il prefetch della pagina collegata al Link*/}
 					</nav>
 					{children}
+
+					{/* <WrapperForClient>
+						<Toaster />
+					</WrapperForClient> */}
+					<Toaster />
+
 					{/* - FOOTER ------------------ */}
 				</ThemeProvider>
 			</body>
