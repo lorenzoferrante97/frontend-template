@@ -123,14 +123,16 @@
 // 	SelectValue,
 // } from "@/app/components/ui/select";
 
-import {
-	Sheet,
-	SheetContent,
-	SheetDescription,
-	SheetHeader,
-	SheetTitle,
-	SheetTrigger,
-} from "@/app/components/ui/sheet";
+// import {
+// 	Sheet,
+// 	SheetContent,
+// 	SheetDescription,
+// 	SheetHeader,
+// 	SheetTitle,
+// 	SheetTrigger,
+// } from "@/app/components/ui/sheet";
+
+import { Skeleton } from "@/app/components/ui/skeleton";
 
 export default function Home() {
 	return (
@@ -420,7 +422,7 @@ export default function Home() {
 				</Select> */}
 
 				{/* - Sheet ------------------------- */}
-				<Sheet>
+				{/* <Sheet>
 					<SheetTrigger>Open</SheetTrigger>
 					<SheetContent>
 						<SheetHeader>
@@ -431,7 +433,10 @@ export default function Home() {
 							</SheetDescription>
 						</SheetHeader>
 					</SheetContent>
-				</Sheet>
+				</Sheet> */}
+
+				{/* - Skeleton ------------------------- */}
+				<Skeleton className="h-[20px] w-[100px] rounded-full" />
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 
