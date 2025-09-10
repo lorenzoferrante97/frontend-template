@@ -134,6 +134,8 @@
 
 // import { Skeleton } from "@/app/components/ui/skeleton";
 
+import { Slider } from "@/app/components/ui/slider";
+
 export default function Home() {
 	return (
 		<div className="container-full h-[50vh] perfect-center gap-10">
@@ -437,6 +439,9 @@ export default function Home() {
 
 				{/* - Skeleton ------------------------- */}
 				{/* <Skeleton className="h-[20px] w-[100px] rounded-full" /> */}
+
+				{/* - Slider ------------------------- */}
+				<Slider defaultValue={[50]} max={100} min={0} step={1} />
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 
