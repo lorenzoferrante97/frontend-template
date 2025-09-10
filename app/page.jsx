@@ -115,7 +115,10 @@
 import {
 	Select,
 	SelectContent,
+	SelectGroup,
 	SelectItem,
+	SelectLabel,
+	SelectSeparator,
 	SelectTrigger,
 	SelectValue,
 } from "@/app/components/ui/select";
@@ -392,9 +395,18 @@ export default function Home() {
 						<SelectValue placeholder="Theme" />
 					</SelectTrigger>
 					<SelectContent>
-						<SelectItem value="light">Light</SelectItem>
-						<SelectItem value="dark">Dark</SelectItem>
-						<SelectItem value="system">System</SelectItem>
+						<SelectGroup>
+							<SelectLabel>Theme</SelectLabel>
+							<SelectItem value="light">Light</SelectItem>
+							<SelectItem value="dark">Dark</SelectItem>
+							<SelectItem value="system">System</SelectItem>
+						</SelectGroup>
+						<SelectGroup>
+							<SelectLabel>Custom Theme</SelectLabel>
+							<SelectItem value="midnight">Midnight</SelectItem>
+							<SelectItem value="pastel">Pastel</SelectItem>
+							<SelectItem value="solar">Solar</SelectItem>
+						</SelectGroup>
 					</SelectContent>
 				</Select>
 
