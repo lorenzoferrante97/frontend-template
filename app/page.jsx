@@ -112,16 +112,25 @@
 
 // import { ScrollArea } from "@/app/components/ui/scroll-area";
 
+// import {
+// 	Select,
+// 	SelectContent,
+// 	SelectGroup,
+// 	SelectItem,
+// 	SelectLabel,
+// 	SelectSeparator,
+// 	SelectTrigger,
+// 	SelectValue,
+// } from "@/app/components/ui/select";
+
 import {
-	Select,
-	SelectContent,
-	SelectGroup,
-	SelectItem,
-	SelectLabel,
-	SelectSeparator,
-	SelectTrigger,
-	SelectValue,
-} from "@/app/components/ui/select";
+	Sheet,
+	SheetContent,
+	SheetDescription,
+	SheetHeader,
+	SheetTitle,
+	SheetTrigger,
+} from "@/components/ui/sheet";
 
 export default function Home() {
 	return (
@@ -390,7 +399,7 @@ export default function Home() {
 				</ScrollArea> */}
 
 				{/* - Select ------------------------- */}
-				<Select>
+				{/* <Select>
 					<SelectTrigger className="w-[180px]">
 						<SelectValue placeholder="Theme" />
 					</SelectTrigger>
@@ -408,7 +417,21 @@ export default function Home() {
 							<SelectItem value="solar">Solar</SelectItem>
 						</SelectGroup>
 					</SelectContent>
-				</Select>
+				</Select> */}
+
+				{/* - Sheet ------------------------- */}
+				<Sheet>
+					<SheetTrigger>Open</SheetTrigger>
+					<SheetContent>
+						<SheetHeader>
+							<SheetTitle>Are you absolutely sure?</SheetTitle>
+							<SheetDescription>
+								This action cannot be undone. This will permanently delete your
+								account and remove your data from our servers.
+							</SheetDescription>
+						</SheetHeader>
+					</SheetContent>
+				</Sheet>
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 
