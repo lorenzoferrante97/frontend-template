@@ -130,7 +130,7 @@ import {
 	SheetHeader,
 	SheetTitle,
 	SheetTrigger,
-} from "@/components/ui/sheet";
+} from "@/app/components/ui/sheet";
 
 export default function Home() {
 	return (
