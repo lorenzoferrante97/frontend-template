@@ -132,7 +132,7 @@
 // 	SheetTrigger,
 // } from "@/app/components/ui/sheet";
 
-import { Skeleton } from "@/app/components/ui/skeleton";
+// import { Skeleton } from "@/app/components/ui/skeleton";
 
 export default function Home() {
 	return (
@@ -436,7 +436,7 @@ export default function Home() {
 				</Sheet> */}
 
 				{/* - Skeleton ------------------------- */}
-				<Skeleton className="h-[20px] w-[100px] rounded-full" />
+				{/* <Skeleton className="h-[20px] w-[100px] rounded-full" /> */}
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 
