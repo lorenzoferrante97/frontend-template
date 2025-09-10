@@ -110,7 +110,15 @@
 // import { Label } from "@/app/components/ui/label";
 // import { RadioGroup, RadioGroupItem } from "@/app/components/ui/radio-group";
 
-import { ScrollArea } from "@/app/components/ui/scroll-area";
+// import { ScrollArea } from "@/app/components/ui/scroll-area";
+
+import {
+	Select,
+	SelectContent,
+	SelectItem,
+	SelectTrigger,
+	SelectValue,
+} from "@/app/components/ui/select";
 
 export default function Home() {
 	return (
@@ -370,13 +378,25 @@ export default function Home() {
 				</RadioGroup> */}
 
 				{/* - Scroll Area ------------------------- */}
-				<ScrollArea direction="vertical" className="h-[200px] w-[350px]">
+				{/* <ScrollArea direction="vertical" className="h-[200px] w-[350px]">
 					<div className="flex flex-col items-stretch h-max w-full space-y-2">
 						<div className="h-[280px] perfect-center bg-base-200">A</div>
 						<div className="h-[280px] perfect-center bg-base-200">B</div>
 						<div className="h-[280px] perfect-center bg-base-200">C</div>
 					</div>
-				</ScrollArea>
+				</ScrollArea> */}
+
+				{/* - Select ------------------------- */}
+				<Select>
+					<SelectTrigger className="w-[180px]">
+						<SelectValue placeholder="Theme" />
+					</SelectTrigger>
+					<SelectContent>
+						<SelectItem value="light">Light</SelectItem>
+						<SelectItem value="dark">Dark</SelectItem>
+						<SelectItem value="system">System</SelectItem>
+					</SelectContent>
+				</Select>
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 
