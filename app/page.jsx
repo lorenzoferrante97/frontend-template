@@ -149,7 +149,9 @@
 
 // import { Textarea } from "@/app/components/ui/textarea";
 
-import { Toggle } from "@/app/components/ui/toggle";
+// import { Toggle } from "@/app/components/ui/toggle";
+
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 export default function Home() {
 	return (
@@ -458,9 +460,16 @@ export default function Home() {
 				{/* <Textarea /> */}
 
 				{/* - Toogle ------------------------- */}
-				<Toggle variant="outline" size="square">
+				{/* <Toggle variant="outline" size="square">
 					B
-				</Toggle>
+				</Toggle> */}
+
+				{/* - Toogle Group ------------------------- */}
+				<ToggleGroup type="single">
+					<ToggleGroupItem value="a">A</ToggleGroupItem>
+					<ToggleGroupItem value="b">B</ToggleGroupItem>
+					<ToggleGroupItem value="c">C</ToggleGroupItem>
+				</ToggleGroup>
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 				{/* local image */}
