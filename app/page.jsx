@@ -140,12 +140,14 @@
 
 // import { Switch } from "@/app/components/ui/switch";
 
-import {
-	Tabs,
-	TabsContent,
-	TabsList,
-	TabsTrigger,
-} from "@/app/components/ui/tabs";
+// import {
+// 	Tabs,
+// 	TabsContent,
+// 	TabsList,
+// 	TabsTrigger,
+// } from "@/app/components/ui/tabs";
+
+import { Textarea } from "@/app/components/ui/textarea";
 
 export default function Home() {
 	return (
@@ -438,7 +440,8 @@ export default function Home() {
 				{/* - Switch ------------------------- */}
 				{/* <Switch /> */}
 
-				<Tabs defaultValue="account" className="w-[400px]">
+				{/* - Tabs ------------------------- */}
+				{/* <Tabs defaultValue="account" className="w-[400px]">
 					<TabsList>
 						<TabsTrigger value="account">Account</TabsTrigger>
 						<TabsTrigger value="password">Password</TabsTrigger>
@@ -447,7 +450,10 @@ export default function Home() {
 						Make changes to your account here.
 					</TabsContent>
 					<TabsContent value="password">Change your password here.</TabsContent>
-				</Tabs>
+				</Tabs> */}
+
+				{/* - Textarea ------------------------- */}
+				<Textarea />
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 				{/* local image */}
