@@ -149,7 +149,7 @@
 
 // import { Textarea } from "@/app/components/ui/textarea";
 
-import { Toggle } from "@/components/ui/toggle";
+import { Toggle } from "@/app/components/ui/toggle";
 
 export default function Home() {
 	return (
@@ -458,7 +458,9 @@ export default function Home() {
 				{/* <Textarea /> */}
 
 				{/* - Toogle ------------------------- */}
-				<Toggle>Toggle</Toggle>
+				<Toggle variant="outline" size="square">
+					B
+				</Toggle>
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 				{/* local image */}
