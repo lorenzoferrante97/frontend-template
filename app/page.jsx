@@ -147,7 +147,9 @@
 // 	TabsTrigger,
 // } from "@/app/components/ui/tabs";
 
-import { Textarea } from "@/app/components/ui/textarea";
+// import { Textarea } from "@/app/components/ui/textarea";
+
+import { Toggle } from "@/components/ui/toggle";
 
 export default function Home() {
 	return (
@@ -453,7 +455,10 @@ export default function Home() {
 				</Tabs> */}
 
 				{/* - Textarea ------------------------- */}
-				<Textarea />
+				{/* <Textarea /> */}
+
+				{/* - Toogle ------------------------- */}
+				<Toggle>Toggle</Toggle>
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 				{/* local image */}
