@@ -136,7 +136,9 @@
 
 // import { Slider } from "@/app/components/ui/slider";
 
-import ToastSection from "./components/ToastSection";
+// import ToastSection from "./components/ToastSection";
+
+import { Switch } from "@/app/components/ui/switch";
 
 export default function Home() {
 	return (
@@ -424,7 +426,10 @@ export default function Home() {
 				{/* <Slider defaultValue={[50]} max={100} min={0} step={1} /> */}
 
 				{/* - Toast ------------------------- */}
-				<ToastSection />
+				{/* <ToastSection /> */}
+
+				{/* - Switch ------------------------- */}
+				<Switch />
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 				{/* local image */}
