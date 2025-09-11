@@ -138,7 +138,14 @@
 
 // import ToastSection from "./components/ToastSection";
 
-import { Switch } from "@/app/components/ui/switch";
+// import { Switch } from "@/app/components/ui/switch";
+
+import {
+	Tabs,
+	TabsContent,
+	TabsList,
+	TabsTrigger,
+} from "@/app/components/ui/tabs";
 
 export default function Home() {
 	return (
@@ -429,7 +436,18 @@ export default function Home() {
 				{/* <ToastSection /> */}
 
 				{/* - Switch ------------------------- */}
-				<Switch />
+				{/* <Switch /> */}
+
+				<Tabs defaultValue="account" className="w-[400px]">
+					<TabsList>
+						<TabsTrigger value="account">Account</TabsTrigger>
+						<TabsTrigger value="password">Password</TabsTrigger>
+					</TabsList>
+					<TabsContent value="account">
+						Make changes to your account here.
+					</TabsContent>
+					<TabsContent value="password">Change your password here.</TabsContent>
+				</Tabs>
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 				{/* local image */}
