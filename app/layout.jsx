@@ -56,10 +56,7 @@ export default function RootLayout({ children }) {
 					</nav>
 					{children}
 
-					{/* <WrapperForClient>
-						<Toaster />
-					</WrapperForClient> */}
-					<Toaster />
+					<Toaster richColors closeButton />
 
 					{/* - FOOTER ------------------ */}
 				</ThemeProvider>

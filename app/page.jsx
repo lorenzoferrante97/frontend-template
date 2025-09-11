@@ -39,7 +39,7 @@
 // 	BreadcrumbSeparator,
 // } from "@/app/components/ui/breadcrumb";
 
-import { Button } from "@/app/components/ui/button";
+// import { Button } from "@/app/components/ui/button";
 
 // import {
 // 	Card,
@@ -136,7 +136,7 @@ import { Button } from "@/app/components/ui/button";
 
 // import { Slider } from "@/app/components/ui/slider";
 
-import WrapperForClient from "./components/WrapperForClient";
+import ToastSection from "./components/ToastSection";
 
 export default function Home() {
 	return (
@@ -424,16 +424,7 @@ export default function Home() {
 				{/* <Slider defaultValue={[50]} max={100} min={0} step={1} /> */}
 
 				{/* - Toast ------------------------- */}
-				{/* <Button
-					onClick={handleClickToToast}
-					color="neutral"
-					variant="default"
-					size="default"
-				>
-					Trigger a toast
-				</Button> */}
-
-				<WrapperForClient></WrapperForClient>
+				<ToastSection />
 
 				{/* - LOCAL IMG ---------------------------------------------------------------------- */}
 				{/* local image */}
