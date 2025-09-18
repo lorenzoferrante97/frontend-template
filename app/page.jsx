@@ -153,7 +153,7 @@
 
 // import { ToggleGroup, ToggleGroupItem } from "@/app/components/ui/toggle-group"
 
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/app/components/ui/tooltip"
 
 export default function Home() {
   return (
