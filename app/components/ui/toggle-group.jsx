@@ -1,61 +1,63 @@
-"use client";
-import * as React from "react"
+"use client"
 import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group"
-
-import { cn } from "@/lib/utils"
+// import * as React from "react"
+import { createContext, useContext } from "react"
 import { toggleVariants } from "@/app/components/ui/toggle"
+import { cn } from "@/lib/utils"
 
-const ToggleGroupContext = React.createContext({
+const ToggleGroupContext = createContext({
   size: "default",
   variant: "default",
 })
 
-function ToggleGroup({
-  className,
-  variant,
-  size,
-  children,
-  ...props
-}) {
+const toggleGroupStyle = {
+  group: "overflow-hidden",
+  item: "rounded-none shadow-none first:rounded-l-md last:rounded-r-md first:border-r-0 last:border-l-0",
+  customFilledGroup: "bg-base-200 p-1 border border-base-300 rounded-md gap-px",
+  customFilledItem:
+    "bg-transparent border-0 data-[state=on]:bg-base-100 rounded-sm data-[state=on]:rounded-sm data-[state=on]:shadow-xs data-[state=on]:shadow-base-content/15",
+}
+
+function ToggleGroup({ className, variant, size, children, ...props }) {
   return (
     <ToggleGroupPrimitive.Root
-      data-slot="toggle-group"
-      data-variant={variant}
-      data-size={size}
       className={cn(
-        "group/toggle-group flex w-fit items-center rounded-md data-[variant=outline]:shadow-xs",
+        "group/toggle-group flex w-fit items-center",
+        toggleGroupStyle.group,
+        `${variant === "filled" && toggleGroupStyle.customFilledGroup}`,
         className
       )}
+      data-size={size}
+      data-slot='toggle-group'
+      data-variant={variant}
       {...props}>
       <ToggleGroupContext.Provider value={{ variant, size }}>
         {children}
       </ToggleGroupContext.Provider>
     </ToggleGroupPrimitive.Root>
-  );
+  )
 }
 
-function ToggleGroupItem({
-  className,
-  children,
-  variant,
-  size,
-  ...props
-}) {
-  const context = React.useContext(ToggleGroupContext)
+function ToggleGroupItem({ className, children, variant, size, ...props }) {
+  const context = useContext(ToggleGroupContext)
 
   return (
     <ToggleGroupPrimitive.Item
-      data-slot="toggle-group-item"
-      data-variant={context.variant || variant}
+      className={cn(
+        toggleVariants({
+          variant: context.variant || variant,
+          size: context.size || size,
+        }),
+        `min-w-0 flex-1 shrink-0 focus:z-10 focus-visible:z-10 ${variant === "filled" || context.variant === "filled" ? toggleGroupStyle.customFilledItem : toggleGroupStyle.item}`,
+        className
+      )}
       data-size={context.size || size}
-      className={cn(toggleVariants({
-        variant: context.variant || variant,
-        size: context.size || size,
-      }), "min-w-0 flex-1 shrink-0 rounded-none shadow-none first:rounded-l-md last:rounded-r-md focus:z-10 focus-visible:z-10 data-[variant=outline]:border-l-0 data-[variant=outline]:first:border-l", className)}
+      data-slot='toggle-group-item'
+      data-variant={context.variant || variant}
       {...props}>
       {children}
     </ToggleGroupPrimitive.Item>
-  );
+  )
 }
 
 export { ToggleGroup, ToggleGroupItem }
