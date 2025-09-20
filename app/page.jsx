@@ -153,7 +153,7 @@
 
 // import { ToggleGroup, ToggleGroupItem } from "@/app/components/ui/toggle-group"
 
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/app/components/ui/tooltip"
+// import { Tooltip, TooltipContent, TooltipTrigger } from "@/app/components/ui/tooltip"
 
 export default function Home() {
   return (
@@ -473,12 +473,12 @@ export default function Home() {
           <ToggleGroupItem value='c'>C</ToggleGroupItem>
         </ToggleGroup> */}
 
-        <Tooltip>
+        {/* <Tooltip>
           <TooltipTrigger>Hover</TooltipTrigger>
           <TooltipContent>
             <p>Add to library</p>
           </TooltipContent>
-        </Tooltip>
+        </Tooltip> */}
 
         {/* - LOCAL IMG ---------------------------------------------------------------------- */}
         {/* local image */}
