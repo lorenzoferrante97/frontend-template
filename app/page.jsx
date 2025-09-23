@@ -155,6 +155,8 @@
 
 // import { Tooltip, TooltipContent, TooltipTrigger } from "@/app/components/ui/tooltip"
 
+import TiltedCard from "@/app/components/TiltedCard"
+
 export default function Home() {
   return (
     <div className='container-full h-[50vh] perfect-center gap-10'>
@@ -439,13 +441,10 @@ export default function Home() {
         {/* <Skeleton className="h-[20px] w-[100px] rounded-full" /> */}
         {/* - Slider ------------------------- */}
         {/* <Slider defaultValue={[50]} max={100} min={0} step={1} /> */}
-
         {/* - Toast ------------------------- */}
         {/* <ToastSection /> */}
-
         {/* - Switch ------------------------- */}
         {/* <Switch /> */}
-
         {/* - Tabs ------------------------- */}
         {/* <Tabs defaultValue="account" className="w-[400px]">
 					<TabsList>
@@ -457,22 +456,18 @@ export default function Home() {
 					</TabsContent>
 					<TabsContent value="password">Change your password here.</TabsContent>
 				</Tabs> */}
-
         {/* - Textarea ------------------------- */}
         {/* <Textarea /> */}
-
         {/* - Toogle ------------------------- */}
         {/* <Toggle variant="outline" size="square">
 					B
 				</Toggle> */}
-
         {/* - Toogle Group ------------------------- */}
         {/* <ToggleGroup size='default' type='multiple' variant='filled'>
           <ToggleGroupItem value='a'>A</ToggleGroupItem>
           <ToggleGroupItem value='b'>B</ToggleGroupItem>
           <ToggleGroupItem value='c'>C</ToggleGroupItem>
         </ToggleGroup> */}
-
         {/* <Tooltip>
           <TooltipTrigger>Hover</TooltipTrigger>
           <TooltipContent>
@@ -480,6 +475,22 @@ export default function Home() {
           </TooltipContent>
         </Tooltip> */}
 
+        {/* - TILTED CARD ---------------------------------------------------------------------- */}
+        <TiltedCard
+          altText='Kendrick Lamar - GNX Album Cover'
+          captionText='Kendrick Lamar - GNX'
+          containerHeight='250px'
+          containerWidth='250px'
+          displayOverlayContent={true}
+          imageHeight='250'
+          imageSrc='https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58'
+          imageWidth='250'
+          overlayContent={<p className='font-body-l-big text-black'>Kendrick Lamar - GNX</p>}
+          rotateAmplitude={12}
+          scaleOnHover={1.2}
+          showMobileWarning={false}
+          showTooltip={true}
+        />
         {/* - LOCAL IMG ---------------------------------------------------------------------- */}
         {/* local image */}
         {/* <figure className="h-52 aspect-[9/16] relative rounded-lg overflow-hidden">
